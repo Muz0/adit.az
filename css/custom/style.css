@@ -42,13 +42,20 @@
 	Body :font-family: 'Open Sans', sans-serif , Arial , Vedana  , Trebuchet MS;
 
 =================================================================================================================================*/
+
+/* Define variables */
+:root {
+  --light-gray: #666666;
+  --dark-gray: #333333;
+}
+
 /*========================================== 1.GLOBAL CSS START ===========================================*/
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 body {
   background: #ffffff;
-  color: #666666;
+  color: var(--light-gray);
   font-family: "Open Sans", sans-serif, Arial, Verdana, "Trebuchet MS";
   font-size: 14px;
   font-weight: 400;
@@ -67,61 +74,61 @@ p {
   margin: 0;
 }
 h1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 55px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h2 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 45px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h3 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 28px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 38px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h4 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 32px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h5 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 26px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 h6 {
-  color: #333333;
+  color: var(--dark-gray);
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 25px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .navbar-default .navbar-nav > li > a {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .text-center {
   text-align: center;
@@ -132,6 +139,9 @@ h6 {
 .text-right {
   text-align: right;
 }
+
+
+
 /*========================================== 1.GLOBAL CSS END ===========================================*/
 /*========================================== 2.COMMON CSS START ===========================================*/
 
@@ -193,21 +203,21 @@ h6 {
   font-weight: 600;
   letter-spacing: 1px;
   padding-top: 10px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .readmore:hover {
   color: #f94b71;
 }
 .readmore1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   padding-top: 10px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .readmore1:hover {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .content-ul {
   padding-left: 0;
@@ -217,13 +227,13 @@ h6 {
   list-style: none;
 }
 .underline {
-  background-color: #333333;
+  background-color: var(--dark-gray);
   width: 60px;
   height: 2px;
   margin: 5px auto 0 auto;
 }
 .underline-1 {
-  background-color: #333333;
+  background-color: var(--dark-gray);
   width: 60px;
   height: 2px;
   margin: 5px 0 0 0;
@@ -304,8 +314,8 @@ h6 {
 .navbar-default .navbar-nav > li > a:hover,
 .pagescroll:hover {
   color: #333333 !important;
-  border-top: 2px solid #333333;
-  border-bottom: 2px solid #333333;
+  border-top: 2px solid var(--dark-gray);
+  border-bottom: 2px solid var(--dark-gray);
   padding: 6px 5px !important;
   margin: 14px 0;
 }
@@ -338,7 +348,7 @@ h6 {
   letter-spacing: 1px;
   outline: none;
   padding: 10px 15px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .btn.btn-1 {
   background-color: rgba(51, 51, 51, 0.9);
@@ -348,7 +358,7 @@ h6 {
   transition: ease-out 0.4s;
 }
 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -360,25 +370,25 @@ h6 {
 }
 .pricing-btn .btn-1 {
   background-color: #eeeeee;
-  color: #333333;
+  color: var(--dark-gray);
 }
 .pricing-btn .btn-1:hover {
   background-color: #eeeeee;
-  color: #333333;
+  color: var(--dark-gray);
 }
 .pricing-btn-1 .btn-1 {
   background-color: #dedede;
-  color: #333333;
+  color: var(--dark-gray);
 }
 .pricing-btn-1 .btn-1:hover {
   background-color: #dedede;
-  color: #333333;
+  color: var(--dark-gray);
 }
 /*========================================== 4.BUTTON END ===========================================*/
 /*========================================== 5.HEADER START ===========================================*/
 
 .header-bgimage-1 {
-  background-image: url("../../images/1920x900x1.jpg");
+  background-image: url("../../images/peakpx.jpg");
   position: relative;
 }
 .header-padding {
@@ -386,27 +396,47 @@ h6 {
   padding-top: 200px;
 }
 .header-div-1 h1 {
-  color: #333333;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
+.header-div-1 h2 {
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+.header-bgimage-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.664); /* tweak alpha for balance */
+  z-index: 1;
+}
+.header-div-1 {
+  position: relative;
+  z-index: 2; /* ensures text sits above overlay */
+}
+
 .header-div-1 h1 span {
   font-size: 30px;
 }
 .header-bgimage-1 .first-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .header-bgimage-1 .second-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -418,11 +448,11 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .header-div-1 .btn-1:focus,
 .header-div-1 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -463,27 +493,27 @@ h6 {
   background-image: url("../../images/slider-image-3.jpg");
 }
 .slider-image1 .header-div-1 h1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image1 h1 span {
   font-size: 30px;
 }
 .slider-image1 .first-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image1 .second-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -495,11 +525,11 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .slider-image1 .header-div-1 .btn-1:focus,
 .slider-image1 .header-div-1 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -512,27 +542,27 @@ h6 {
 }
 
 .slider-image2 .header-div-1 h1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image2 h1 span {
   font-size: 30px;
 }
 .slider-image2 .first-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image2 .second-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -544,11 +574,11 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .slider-image2 .header-div-1 .btn-1:focus,
 .slider-image2 .header-div-1 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -560,27 +590,27 @@ h6 {
 }
 
 .slider-image3 .header-div-1 h1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image3 h1 span {
   font-size: 30px;
 }
 .slider-image3 .first-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .slider-image3 .second-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -592,11 +622,11 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .slider-image3 .header-div-1 .btn-1:focus,
 .slider-image3 .header-div-1 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -606,27 +636,27 @@ h6 {
 
 /*header form*/
 .header-div-3 h1 {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 50px;
   font-weight: 600;
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .header-div-3 h1 span {
   font-size: 30px;
 }
 .header-bgimage-3 .first-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .header-bgimage-3 .second-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 3px;
@@ -637,7 +667,7 @@ h6 {
   margin-bottom: 20px;
 }
 .form-div textarea {
-  color: #333333;
+  color: var(--dark-gray);
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
@@ -648,7 +678,7 @@ h6 {
   position: relative;
 }
 .form-div input {
-  color: #333333;
+  color: var(--dark-gray);
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
@@ -659,7 +689,7 @@ h6 {
   position: relative;
 }
 .form-section h3 {
-  color: #333333;
+  color: var(--dark-gray);
   margin-bottom: 20px;
 }
 .form-div label {
@@ -691,11 +721,11 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 .header-div-3 .btn-1:focus,
 .header-div-3 .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -721,10 +751,10 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 .services-div h5 a {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .services-div p {
-  color: #666666;
+  color: var(--light-gray);
 }
 .services-div:hover {
   border-bottom: 2px solid #999999;
@@ -791,7 +821,7 @@ h6 {
 /*========================================== 8.TWO COLUMN START ===========================================*/
 /*features*/
 .features-col h4 a {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .features-col li {
   background-color: #f5f5f5;
@@ -834,7 +864,7 @@ h6 {
 }
 .two-right-div h3 a,
 .two-left-div h3 a {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .two-left-bgimage {
   background-image: url("../../images/1000x530x1.jpg");
@@ -855,7 +885,7 @@ h6 {
   padding-top: 120px;
 }
 .counter-value {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 45px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -863,11 +893,11 @@ h6 {
   margin: 0 auto 20px auto;
 }
 .counter-title {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .counter-div .col-md-4 {
   padding-left: 10px;
@@ -889,21 +919,21 @@ h6 {
   margin-bottom: 20px;
 }
 .testimonial-para {
-  color: #333333;
+  color: var(--dark-gray);
   font-style: italic;
   padding-top: 20px;
   text-align: left;
   width: 80%;
 }
 .testimonial-bg h2 {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .testimonial-name-div {
   display: table;
   padding-top: 30px;
 }
 .testimonial-name {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -943,7 +973,7 @@ h6 {
   vertical-align: middle;
 }
 .news-ul p a:hover {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .news-col {
   background-color: #f5f5f5;
@@ -956,14 +986,14 @@ h6 {
   margin-top: 5px;
 }
 .news-col h4 a {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .news-ul p {
-  color: #666666;
+  color: var(--light-gray);
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .news-ul p a {
   color: #777777;
@@ -1016,10 +1046,10 @@ h6 {
 }
 .price-line:hover .price-line-common.light:before,
 .price-line:hover .price-line-common.light:after {
-  border-bottom-color: #333333;
-  border-left-color: #333333;
-  border-right-color: #333333;
-  border-top-color: #333333;
+  border-bottom-color: var(--dark-gray);
+  border-left-color: var(--dark-gray);
+  border-right-color: var(--dark-gray);
+  border-top-color: var(--dark-gray);
 }
 .price-line .price-line-1:after {
   border-bottom-width: 1px;
@@ -1086,13 +1116,13 @@ h6 {
   border: 1px solid #dddddd;
 }
 .price-table-content p {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
 }
 .price-table-content span {
-  color: #666666;
+  color: var(--light-gray);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -1112,19 +1142,19 @@ h6 {
   letter-spacing: 1px;
 }
 .price-head h4 {
-  color: #333333;
+  color: var(--dark-gray);
   padding-bottom: 10px;
 }
 .price-head p {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 30px;
 }
 .price-head-1 h4 {
-  color: #333333;
+  color: var(--dark-gray);
   padding-bottom: 10px;
 }
 .price-head-1 p {
-  color: #333333;
+  color: var(--dark-gray);
   font-size: 30px;
 }
 /*========================================== 12.PRICE TABLE END ===========================================*/
@@ -1170,7 +1200,7 @@ h6 {
 }
 
 .form-div-1 textarea {
-  color: #666666;
+  color: var(--light-gray);
   border: 1px solid #dddddd;
   background-color: #f5f5f5;
   border-radius: 3px;
@@ -1180,7 +1210,7 @@ h6 {
   padding-top: 6px;
 }
 .form-div-1 input {
-  color: #666666;
+  color: var(--light-gray);
   border: 1px solid #dddddd;
   background-color: #f5f5f5;
   border-radius: 3px;
@@ -1213,13 +1243,13 @@ textarea:focus {
   color: #ffffff;
 }
 .contact-div p {
-  color: #666666;
+  color: var(--light-gray);
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
 }
 .contact-div p a {
-  color: #666666;
+  color: var(--light-gray);
 }
 .contact-address li {
   display: table-cell;
@@ -1308,14 +1338,14 @@ textarea:focus {
   width: 85%;
 }
 .strip-row h3 {
-  color: #333333;
+  color: var(--dark-gray);
   margin-bottom: 8px;
 }
 .strip-btn {
   margin-top: 26px;
 }
 .strip-row p {
-  color: #333333;
+  color: var(--dark-gray);
 }
 /*========================================== 14.SUBSCRIBE END ===========================================*/
 /*========================================== 15.TEAM START ===========================================*/
@@ -1375,7 +1405,7 @@ textarea:focus {
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .content-details p {
   color: #fff;
@@ -1407,7 +1437,7 @@ textarea:focus {
   padding-top: 150px;
 }
 .cta-bg h2 {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .cta-bg p {
   color: #444444;
@@ -1425,7 +1455,7 @@ textarea:focus {
   transition: ease-out 0.4s;
 }
 .cta-bg .btn-1:hover {
-  color: #333333;
+  color: var(--dark-gray);
   box-shadow: inset 0 0 0 50px #ffffff;
   background-color: transparent;
   -webkit-transition: ease-out 0.4s;
@@ -1498,7 +1528,7 @@ textarea:focus {
   border-radius: 7px !important;
 }
 .gallery-col a {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .gallery-inner:hover .gallery-caption:before {
   opacity: 1;
@@ -1514,11 +1544,11 @@ textarea:focus {
   -moz-outline-radius: 3px !important;
 }
 .gallery-caption i {
-  color: #333333;
+  color: var(--dark-gray);
   position: relative;
   margin-top: 0;
   margin-bottom: 8px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 25px;
   font-size: 20px;
   font-weight: 400;
@@ -1529,14 +1559,14 @@ textarea:focus {
 /* Filter controls */
 
 .filter-options li {
-  color: #666666;
+  color: var(--light-gray);
   cursor: pointer;
   display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   position: relative;
   padding: 5px 0;
 }
@@ -1551,10 +1581,10 @@ textarea:focus {
   padding-right: 0;
 }
 .filter-options li.active {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .filter-options li:hover {
-  color: #333333;
+  color: var(--dark-gray);
 }
 .filter-options {
   margin-bottom: 30px;
@@ -1584,7 +1614,7 @@ textarea:focus {
 .subscribe-form input {
   border: 0;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #666666;
+  color: var(--light-gray);
   height: 52px;
   border-radius: 7px;
   margin-bottom: 25px;
@@ -1742,8 +1772,8 @@ textarea:focus {
   .navbar-default .navbar-nav > li > a:hover,
   .pagescroll:hover {
     color: #333333 !important;
-    border-top: 2px solid #333333;
-    border-bottom: 2px solid #333333;
+    border-top: 2px solid var(--dark-gray);
+    border-bottom: 2px solid var(--dark-gray);
     padding: 5px 5px !important;
     margin: 4px 0;
   }
@@ -1785,7 +1815,7 @@ textarea:focus {
   }
   .price-head p,
   .price-head-1 p {
-    color: #333333;
+    color: var(--dark-gray);
     font-size: 22px;
   }
   .cta-bg p {

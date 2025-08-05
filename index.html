@@ -49,6 +49,23 @@
     />
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="css/custom/style.css" />
+    <style>
+      .equal-height-row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .equal-height-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .three-col-div {
+        flex: 1; /* stretch to equal height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* optional, keeps button at bottom */
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
     <!--================================= NAVIGATION START ==========================================-->
@@ -111,10 +128,14 @@
       <div class="header-bgimage-1 bgimage-property clearfix" id="home">
         <div class="container">
           <div class="col-sm-12 header-div-1 header-padding text-center">
-            <h1>Black White</h1>
-            <p class="second-para">We Promote Your Business Much Better</p>
+            <h1>Missiyamız</h1>
+            <h2>
+              Azərbaycanda hər bir biznes üçün dünya səviyyəli elektronikanı
+              əlçatan, münasib və etibarlı etmək.
+            </h2>
+            <!-- <p class="second-para">Azərbaycanda hər bir biznes üçün dünya səviyyəli elektronikanı əlçatan, münasib və etibarlı etmək.</p> -->
             <div class="header-btn">
-              <a href="#" class="btn btn-1">Read More</a>
+              <a href="#about-us" class="btn btn-1">Ətraflı</a>
             </div>
           </div>
         </div>
@@ -122,157 +143,72 @@
     </header>
     <!--================================= HEADER-1 ENDS ============================================-->
 
-    <!--================================= SERVICE-1 START ==========================================-->
-    <section class="section-padding bgimage-property" id="services">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Our Powerful Services</h2>
-          <div class="underline"></div>
+    <!--================================= ABOUT-US-1 START ==========================================-->
+    <section class="section-2-bg two-left-right-bg" id="about-us">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-sm-12 col-md-6 two-left-bgimage bgimage-property"
+          ></div>
+          <div class="container">
+            <div class="col-sm-12 col-md-6 two-left-div">
+              <h3>Haqqqımızda</h3>
+              <div class="underline-1"></div>
+              <p class="content-top-space">
+                ADIT, Bakı, Azərbaycan mərkəzli aparıcı elektronika paylayıcı
+                şirkətdir və yüksək keyfiyyətli istehlak və sənaye elektronikası
+                məhsullarının təchizatı üzrə ixtisaslaşıb. Biz Samsung, Apple,
+                Philips və Xiaomi məhsullarının rəsmi distribyutorları olaraq,
+                ölkə daxilində və geniş Qafqaz regionunda bizneslərə, pərakəndə
+                satış şəbəkələrinə və müəssisələrə xidmət göstəririk.
+              </p>
+              <p class="content-top-space">
+                Keyfiyyətə, şəffaflığa və uzunmüddətli tərəfdaşlıqlara böyük
+                önəm verərək, yalnız məhsullar deyil, tam həllər təqdim edirik.
+              </p>
+              <div class="btn-top-space">
+                <a href="#" class="btn btn-1">Ətraflı</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="row services-row">
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space-2 services-space-3 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x1.png"
-                alt="48x48x1"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Design</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
+        <div class="row two-right-main">
+          <div class="col-sm-12 col-md-6 two-right-div">
+            <h3>Haqqqımızda</h3>
+            <div class="underline-1"></div>
+            <p class="content-top-space">
+              ADIT, Bakı, Azərbaycan mərkəzli aparıcı elektronika paylayıcı
+              şirkətdir və yüksək keyfiyyətli istehlak və sənaye elektronikası
+              məhsullarının təchizatı üzrə ixtisaslaşıb. Biz Samsung, Apple,
+              Philips və Xiaomi məhsullarının rəsmi distribyutorları olaraq,
+              ölkə daxilində və geniş Qafqaz regionunda bizneslərə, pərakəndə
+              satış şəbəkələrinə və müəssisələrə xidmət göstəririk.
+            </p>
+            <p class="content-top-space">
+              Keyfiyyətə, şəffaflığa və uzunmüddətli tərəfdaşlıqlara böyük önəm
+              verərək, yalnız məhsullar deyil, tam həllər təqdim edirik.
+            </p>
+            <div class="btn-top-space">
+              <a href="#" class="btn btn-1">Ətraflı</a>
             </div>
           </div>
           <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space-2 services-space-3 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x2.png"
-                alt="48x48x2"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Development</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space-1 services-space-2 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x3.png"
-                alt="48x48x3"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Marketing</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space-1 services-space-2 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x4.png"
-                alt="48x48x4"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Branding</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space services-space-1 services-space-2 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x5.png"
-                alt="48x48x5"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Responsive</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space services-space-1 services-space-2 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x6.png"
-                alt="48x48x6"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Testing</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space services-space-2 onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x7.png"
-                alt="48x48x7"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">App</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
-          <div
-            class="col-xs-6 col-sm-6 col-md-3 text-center services-space onecolumn-res"
-          >
-            <div class="services-div">
-              <img
-                src="images/48x48x8.png"
-                alt="48x48x8"
-                class="image-bottom-space1"
-              />
-              <h5><a href="#">Support</a></h5>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla.
-              </p>
-            </div>
-          </div>
+            class="col-sm-12 col-md-6 two-right-bgimage bgimage-property"
+          ></div>
         </div>
       </div>
     </section>
-    <!--================================= SERVICE-1 ENDS ==========================================-->
+    <!--================================= ABOUT-US-1 ENDS ==========================================-->
 
-    <!--================================= THREE COLUMN START ==========================================-->
+    <!--================================= TWO COLUMN START ==========================================-->
     <section class="section-padding section-2-bg">
       <div class="container">
         <div class="heading-div-1 text-center">
-          <h2>Our Business Approach</h2>
+          <h2>Nə ilə fərqlənirik?</h2>
           <div class="underline"></div>
         </div>
-        <div class="row">
-          <div class="col-sm-4 three-col section-space">
+        <div class="row equal-height-row">
+          <div class="col-sm-6 three-col section-space equal-height-col">
             <div class="three-img">
               <img
                 src="images/750x500x1.jpg"
@@ -281,17 +217,21 @@
               />
             </div>
             <div class="three-col-div">
-              <h4>Business Consulting</h4>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-              </p>
+              <div>
+                <h4>Rəsmi Tərəfdaşlıqlar</h4>
+                <p class="content-top-space1">
+                  Apple, Samsung, Philips və Xiaomi-nin səlahiyyətli
+                  distribyutorları ilə birbaşa əməkdaşlıq edərək,
+                  müştərilərimizə orijinal və zəmanətli məhsulların
+                  çatdırılmasını təmin edirik.
+                </p>
+              </div>
               <div class="btn-top-space">
                 <a href="#" class="btn btn-1">Read More</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-4 three-col section-space">
+          <div class="col-sm-6 three-col section-space equal-height-col">
             <div class="three-img">
               <img
                 src="images/750x500x2.jpg"
@@ -300,32 +240,17 @@
               />
             </div>
             <div class="three-col-div">
-              <h4>Awesome Support</h4>
-              <div class="hide-content">
-                <p class="content-top-space1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                </p>
-                <div class="btn-top-space">
-                  <a href="#" class="btn btn-1">Read More</a>
+              <div>
+                <h4>Müştəriyə Yönəlik Xidmət</h4>
+
+                <div class="hide-content">
+                  <p class="content-top-space1">
+                    Müştərilərimizi işimizin prioriteti olaraq qəbul edir və
+                    onların fərdi ehtiyaclarına uyğun yüksək səviyyəli xidmət və
+                    dəstək göstəririk.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-4 three-col">
-            <div class="three-img">
-              <img
-                src="images/750x500x3.jpg"
-                alt="750x500x3"
-                class="img-responsive"
-              />
-            </div>
-            <div class="three-col-div">
-              <h4>Business Promotion</h4>
-              <p class="content-top-space1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-              </p>
               <div class="btn-top-space">
                 <a href="#" class="btn btn-1">Read More</a>
               </div>
@@ -334,38 +259,13 @@
         </div>
       </div>
     </section>
-    <!--================================= THREE COLUMN ENDS ==========================================-->
+    <!--================================= TWO COLUMN ENDS ==========================================-->
 
-    <!--================================= COUNTER START ==========================================-->
-    <div class="counter-bgimage bgimage-property">
-      <div class="container">
-        <div class="row counter-div">
-          <div class="col-xs-6 col-sm-3 col-md-3 text-center counter-space">
-            <p class="counter-value"><span class="count">2330</span></p>
-            <p class="counter-title">Projects</p>
-          </div>
-          <div class="col-xs-6 col-sm-3 col-md-3 text-center counter-space1">
-            <p class="counter-value"><span class="count">2200</span></p>
-            <p class="counter-title">CLIENTS</p>
-          </div>
-          <div class="col-xs-6 col-sm-3 col-md-3 text-center">
-            <p class="counter-value"><span class="count">1000</span></p>
-            <p class="counter-title">AWARDS</p>
-          </div>
-          <div class="col-xs-6 col-sm-3 col-md-3 text-center">
-            <p class="counter-value"><span class="count">3000</span></p>
-            <p class="counter-title">Likes</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================================= COUNTER ENDS ==========================================-->
-
-    <!--================================= FEATURES-1 START ==========================================-->
+    <!--================================= VALUES-1 START ==========================================-->
     <section class="section-padding section-1-bg">
       <div class="container">
         <div class="heading-div-1 text-center">
-          <h2>Our Features</h2>
+          <h2>Əsas Dəyərlərimiz</h2>
           <div class="underline"></div>
         </div>
         <div class="row">
@@ -383,13 +283,14 @@
               <li class="content-li">
                 <div class="list-div">
                   <div class="list-div-left">
-                    <img src="images/48x48x9.png" alt="48x48x9" />
+                    <img src="images/quality.png" alt="Keyfiyyət" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">24x7 Premium Support</a></h4>
+                    <h4><a href="#">Keyfiyyət</a></h4>
                     <p class="content-top-space-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus vitae semper nulla.
+                      Yüksək performanslı və tam yoxlanılmış məhsullar təqdim
+                      edirik; bütün təchizatımız beynəlxalq sənaye
+                      standartlarına tam uyğundur.
                     </p>
                   </div>
                 </div>
@@ -397,13 +298,14 @@
               <li class="content-li">
                 <div class="list-div">
                   <div class="list-div-left">
-                    <img src="images/48x48x10.png" alt="48x48x10" />
+                    <img src="images/trust.png" alt="Etibarlılıq" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">70+ Domain Expertise</a></h4>
+                    <h4><a href="#">Etibarlılıq</a></h4>
                     <p class="content-top-space-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus vitae semper nulla.
+                      Tərəfdaşlıq münasibətlərini şəffaflıq, dürüstlük və
+                      davamlı xidmət prinsipləri ilə qurur, uzunmüddətli
+                      əməkdaşlığa zəmanət veririk.
                     </p>
                   </div>
                 </div>
@@ -411,13 +313,14 @@
               <li class="content-li">
                 <div class="list-div">
                   <div class="list-div-left">
-                    <img src="images/48x48x11.png" alt="48x48x11" />
+                    <img src="images/stability.png" alt="Sabitlik" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">100+ Happiest Clients</a></h4>
+                    <h4><a href="#">Sabitlik</a></h4>
                     <p class="content-top-space-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus vitae semper nulla.
+                      Hər bir sifarişi vaxtında və ideal vəziyyətdə çatdırmaqla
+                      tərəfdaşlarımızın fəaliyyətinə fasiləsiz dəstək
+                      göstəririk.
                     </p>
                   </div>
                 </div>
@@ -425,13 +328,14 @@
               <li class="content-li">
                 <div class="list-div">
                   <div class="list-div-left">
-                    <img src="images/48x48x12.png" alt="48x48x12" />
+                    <img src="images/innovation.png" alt="İnnovasiya" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">Accurate Tracking &amp; Reporting</a></h4>
+                    <h4><a href="#">İnnovasiya</a></h4>
                     <p class="content-top-space-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus vitae semper nulla.
+                      Bazardakı yenilikləri yaxından izləyir, məhsul və
+                      xidmətlərimizi daim təkmilləşdirərək müştərilərimizə
+                      qabaqcıl texnologiyalar təqdim edirik.
                     </p>
                   </div>
                 </div>
@@ -441,731 +345,17 @@
         </div>
       </div>
     </section>
-    <!--================================= FEATURES-1 ENDS ==========================================-->
+    <!--================================= VALUES-1 ENDS ==========================================-->
 
-    <!--================================= TWO COLUMN LEFT AND RIGHT START ==========================================-->
-    <section class="section-2-bg two-left-right-bg">
-      <div class="container-fluid">
-        <div class="row">
-          <div
-            class="col-sm-12 col-md-6 two-left-bgimage bgimage-property"
-          ></div>
-          <div class="container">
-            <div class="col-sm-12 col-md-6 two-left-div">
-              <h3>Creative Template</h3>
-              <div class="underline-1"></div>
-              <p class="content-top-space">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit. Sed
-                nec risus sapien. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
-              </p>
-              <p class="content-top-space">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit. Sed
-                nec risus sapien. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Phasellus vitae semper nulla. Nunc tempus
-                consequat blandit. Sed nec risus sapien.
-              </p>
-              <div class="btn-top-space">
-                <a href="#" class="btn btn-1">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row two-right-main">
-          <div class="col-sm-12 col-md-6 two-right-div">
-            <h3>Modern Template</h3>
-            <div class="underline-1"></div>
-            <p class="content-top-space">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae semper nulla. Nunc tempus consequat blandit. Sed nec risus
-              sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <p class="content-top-space">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae semper nulla. Nunc tempus consequat blandit. Sed nec risus
-              sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus vitae semper nulla. Nunc tempus consequat blandit. Sed
-              nec risus sapien.
-            </p>
-            <div class="btn-top-space">
-              <a href="#" class="btn btn-1">Read More</a>
-            </div>
-          </div>
-          <div
-            class="col-sm-12 col-md-6 two-right-bgimage bgimage-property"
-          ></div>
-        </div>
-      </div>
-    </section>
-    <!--================================= TWO COLUMN LEFT AND RIGHT ENDS ==========================================-->
-
-    <!--================================= GALLERY START ==============================================-->
-    <div class="gallery-padding section-1-bg gallery-section" id="gallery">
-      <div class="container-fluid">
-        <div class="heading-div-1 text-center">
-          <h2>Our Awesome Gallery</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row">
-          <ul class="filter-options">
-            <li class="active" data-group="all">All</li>
-            <li data-group="development">Development</li>
-            <li data-group="design">Design</li>
-            <li data-group="branding">Branding</li>
-            <li data-group="marketing">Marketing</li>
-            <li data-group="graphic">Graphic Design</li>
-          </ul>
-        </div>
-        <div id="grid" class="row popup-gallery gallery-div myShuffle">
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-space picture-item"
-            data-groups='["all","development", "graphic"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x1.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x1.jpg"
-                    alt="520x480x1"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-space picture-item"
-            data-groups='["all","design", "graphic"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x2.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x2.jpg"
-                    alt="520x480x2"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-space picture-item"
-            data-groups='["all","development","marketing"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x3.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x3.jpg"
-                    alt="520x480x3"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-space picture-item"
-            data-groups='["all","design"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x4.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x4.jpg"
-                    alt="520x480x4"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-row-2 picture-item"
-            data-groups='["all","design","branding"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x5.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x5.jpg"
-                    alt="520x480x5"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-row-2 picture-item"
-            data-groups='["all","development", "marketing"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x6.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x6.jpg"
-                    alt="520x480x6"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-row-2 picture-item"
-            data-groups='["all","development", "graphic"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x7.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x7.jpg"
-                    alt="520x480x7"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-sm-3 col-xs-6 gallery-col gallery-row-2 picture-item"
-            data-groups='["all","design", "branding"]'
-          >
-            <div class="gallery-image picture-item__inner">
-              <a href="images/520x480x8.jpg" title="Gallery">
-                <div class="gallery-inner">
-                  <img
-                    src="images/520x480x8.jpg"
-                    alt="520x480x8"
-                    class="img-responsive"
-                  />
-                  <div class="gallery-caption">
-                    <i class="fa fa-search-plus" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================================= GALLERY ENDS ==========================================-->
-
-    <!--================================= TEAM START ==========================================-->
-    <section class="section-padding section-2-bg">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Our Team Members</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 text-center team-col-1 onecolumn-res">
-            <div class="team-col res-space">
-              <div class="content">
-                <div class="content-overlay"></div>
-                <img
-                  src="images/360x400x1.png"
-                  alt="360x400x1"
-                  class="img-responsive content-image"
-                />
-                <div class="content-details fade-top">
-                  <ul class="content-ul team-icon">
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x1.png" alt="32x32x1"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x2.png" alt="32x32x2"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x3.png" alt="32x32x3"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x4.png" alt="32x32x4"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <h4>Lara Emily</h4>
-              <p>Developer</p>
-            </div>
-          </div>
-          <div class="col-sm-4 text-center team-col-1 onecolumn-res">
-            <div class="team-col res-space">
-              <div class="content">
-                <div class="content-overlay"></div>
-                <img
-                  src="images/360x400x2.png"
-                  alt="360x400x2"
-                  class="img-responsive content-image"
-                />
-                <div class="content-details fade-top">
-                  <ul class="content-ul team-icon">
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x1.png" alt="32x32x1"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x2.png" alt="32x32x2"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x3.png" alt="32x32x3"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x4.png" alt="32x32x4"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <h4>Peterpaul</h4>
-              <p>Developer</p>
-            </div>
-          </div>
-          <div class="col-sm-4 text-center team-col-2 onecolumn-res">
-            <div class="team-col">
-              <div class="content">
-                <div class="content-overlay"></div>
-                <img
-                  src="images/360x400x3.png"
-                  alt="360x400x3"
-                  class="img-responsive content-image"
-                />
-                <div class="content-details fade-top">
-                  <ul class="content-ul team-icon">
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x1.png" alt="32x32x1"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x2.png" alt="32x32x2"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x3.png" alt="32x32x3"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><img src="images/32x32x4.png" alt="32x32x4"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <h4>Daisy John</h4>
-              <p>Developer</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= TEAM ENDS ==========================================-->
-
-    <!--=================================  TESTIMONIAL START ==========================================-->
-    <section
-      class="section-padding testimonial-bg bgimage-property"
-      id="testimonial"
-    >
-      <div class="container">
-        <div class="col-sm-12 text-center">
-          <h2>Our Testimonial</h2>
-          <div class="underline"></div>
-          <div class="owl-carousel testimonial">
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x1.png" alt="80x80x1" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">Lara Emily</p>
-                      <p class="testimonial-name1">Senior Developer</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x2.png" alt="80x80x2" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">John Doe</p>
-                      <p class="testimonial-name1">Manager</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x3.png" alt="80x80x3" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">Mark David</p>
-                      <p class="testimonial-name1">Developer</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x4.png" alt="80x80x4" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">Carol</p>
-                      <p class="testimonial-name1">Team Leader</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x5.png" alt="80x80x5" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">Daisy John</p>
-                      <p class="testimonial-name1">CEO</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="testimonial-div">
-                <div class="testimonial-name-div">
-                  <div class="list-div">
-                    <div class="list-div-left">
-                      <img src="images/80x80x6.png" alt="80x80x6" />
-                    </div>
-                    <div class="list-div-body">
-                      <p class="testimonial-name">Katherine</p>
-                      <p class="testimonial-name1">Designer</p>
-                    </div>
-                  </div>
-                </div>
-                <p class="testimonial-para">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Phasellus vitae semper nulla. Nunc tempus consequat blandit.
-                  Sed nec risus sapien. Lorem ipsum dolor sit amet consectetur."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= TESTIMONIAL ENDS ============================================-->
-
-    <!--================================= PRICE TABLE-1 START ==========================================-->
-    <section class="section-padding section-1-bg" id="pricing">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Our Pricing</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 res-space">
-            <div class="price-line">
-              <div class="price-table-col price-line-1 price-line-common light">
-                <div class="price-line-2 price-line-common light">
-                  <div class="price-head text-center">
-                    <h4>Basic</h4>
-                    <p class="pt-price">$30 <span>/ month</span></p>
-                  </div>
-                  <div class="price-inner text-center">
-                    <ul class="price-table-content content-ul">
-                      <li>
-                        <p>400GB <span>Bandwidth</span></p>
-                      </li>
-                      <li>
-                        <p>100 <span>Email Address</span></p>
-                      </li>
-                      <li>
-                        <p>500 <span>Clients</span></p>
-                      </li>
-                      <li>
-                        <p>Forum <span>Support</span></p>
-                      </li>
-                      <li>
-                        <p>No Free <span>Squirel</span></p>
-                      </li>
-                    </ul>
-                    <div class="pricing-btn">
-                      <a href="#" class="btn btn-1">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 res-space">
-            <div class="price-line">
-              <div class="price-table-col price-line-1 price-line-common light">
-                <div class="price-line-2 price-line-common light">
-                  <div class="price-head-1 text-center">
-                    <h4>Premium</h4>
-                    <p class="pt-price">$90 <span>/ month</span></p>
-                  </div>
-                  <div class="price-inner text-center">
-                    <ul class="price-table-content content-ul">
-                      <li>
-                        <p>400GB <span>Bandwidth</span></p>
-                      </li>
-                      <li>
-                        <p>100 <span>Email Address</span></p>
-                      </li>
-                      <li>
-                        <p>500 <span>Clients</span></p>
-                      </li>
-                      <li>
-                        <p>Forum <span>Support</span></p>
-                      </li>
-                      <li>
-                        <p>No Free <span>Squirel</span></p>
-                      </li>
-                    </ul>
-                    <div class="pricing-btn-1">
-                      <a href="#" class="btn btn-1">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="price-line">
-              <div class="price-table-col price-line-1 price-line-common light">
-                <div class="price-line-2 price-line-common light">
-                  <div class="price-head text-center">
-                    <h4>Advanced</h4>
-                    <p class="pt-price">$60 <span>/ month</span></p>
-                  </div>
-                  <div class="price-inner text-center">
-                    <ul class="price-table-content content-ul">
-                      <li>
-                        <p>400GB <span>Bandwidth</span></p>
-                      </li>
-                      <li>
-                        <p>100 <span>Email Address</span></p>
-                      </li>
-                      <li>
-                        <p>500 <span>Clients</span></p>
-                      </li>
-                      <li>
-                        <p>Forum <span>Support</span></p>
-                      </li>
-                      <li>
-                        <p>No Free <span>Squirel</span></p>
-                      </li>
-                    </ul>
-                    <div class="pricing-btn">
-                      <a href="#" class="btn btn-1">Buy Now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= PRICE TABLE-1 ENDS ==========================================-->
-
-    <!--=================================  CTA START ==========================================-->
-    <section class="cta-bg bgimage-property">
-      <div class="container">
-        <div class="col-sm-12 text-center">
-          <h2>Call To Action</h2>
-          <div class="underline"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            vitae semper nulla. Nunc tempus consequat blandit. Sed nec risus
-            sapien. Lorem ipsum dolor sit amet consectetur.
-          </p>
-          <div class="btn-top-space">
-            <a href="#" class="btn btn-1">Read More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= CTA ENDS ============================================-->
-
-    <!--================================= NEWS START ==========================================-->
-    <section class="section-padding section-1-bg" id="news">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Our News</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row news-row-1">
-          <div class="col-sm-4">
-            <div class="news-img">
-              <img
-                src="images/360x225x1.jpg"
-                alt="360x225x1"
-                class="img-responsive"
-              />
-            </div>
-          </div>
-          <div class="col-sm-8">
-            <div class="news-col">
-              <ul class="content-ul news-ul">
-                <li>
-                  <a href="#"><img src="images/24x24x1.png" alt="24x24x1" /></a>
-                </li>
-                <li>
-                  <p><a href="#">Mar 24, 2017</a></p>
-                </li>
-              </ul>
-              <h4><a href="#">Word Startup Meeting</a></h4>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit. Sed
-                nec risus sapien. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Phasellus vitae semper nulla. Nunc tempus
-                consequat blandit. Sed nec risus sapien.
-              </p>
-              <div class="content-top-space">
-                <a href="#" class="readmore1"
-                  >Read More
-                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row news-row-2">
-          <div class="col-sm-4 col-sm-push-8">
-            <div class="news-img">
-              <img
-                src="images/360x225x2.jpg"
-                alt="360x225x2"
-                class="img-responsive"
-              />
-            </div>
-          </div>
-          <div class="col-sm-8 col-sm-pull-4">
-            <div class="news-col">
-              <ul class="content-ul news-ul">
-                <li>
-                  <a href="#"><img src="images/24x24x1.png" alt="24x24x1" /></a>
-                </li>
-                <li>
-                  <p><a href="#">Mar 24, 2017</a></p>
-                </li>
-              </ul>
-              <h4><a href="#">Word Startup Meeting</a></h4>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vitae semper nulla. Nunc tempus consequat blandit. Sed
-                nec risus sapien. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Phasellus vitae semper nulla. Nunc tempus
-                consequat blandit. Sed nec risus sapien.
-              </p>
-              <div class="content-top-space">
-                <a href="#" class="readmore1"
-                  >Read More
-                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= NEWS ENDS ==========================================-->
-
-    <!--================================= SPONSORS-2 START ==========================================-->
+    <!--================================= PARTNERS-1 START ==========================================-->
     <div class="section-2-bg section-padding">
       <div class="container">
         <div class="heading-div-1 text-center">
-          <h2>Our Sponsors</h2>
+          <h2>
+            Rəsmi Distribyusiya
+            <br />
+            V PARTNERS
+          </h2>
           <div class="underline"></div>
         </div>
         <div class="row client-row">
@@ -1173,7 +363,7 @@
             class="col-xs-6 col-sm-3 clients-res-space onecolumn-res clients-res-space1"
           >
             <img
-              src="images/280x200x1.png"
+              src="images/samsung.avif"
               alt="280x200x1"
               class="img-responsive"
             />
@@ -1182,21 +372,21 @@
             class="col-xs-6 col-sm-3 clients-res-space onecolumn-res clients-res-space1"
           >
             <img
-              src="images/280x200x2.png"
+              src="images/apple.jpg"
               alt="280x200x2"
               class="img-responsive"
             />
           </div>
           <div class="col-xs-6 col-sm-3 onecolumn-res clients-res-space1">
             <img
-              src="images/280x200x3.png"
+              src="images/philips.jpg"
               alt="280x200x3"
               class="img-responsive"
             />
           </div>
           <div class="col-xs-6 col-sm-3 onecolumn-res">
             <img
-              src="images/280x200x4.png"
+              src="images/xiaomi-4.svg"
               alt="280x200x4"
               class="img-responsive"
             />
@@ -1204,105 +394,198 @@
         </div>
       </div>
     </div>
-    <!--================================= SPONSORS-2 ENDS ==========================================-->
+    <!--================================= PARTNERS-1 ENDS ==========================================-->
 
-    <!--================================= HEADER STRIP START ==========================================-->
-    <div class="header-strip-bg bgimage-property">
+    <!--================================= HOME-EQUIP START ==========================================-->
+    <section class="section-padding bgimage-property" id="services">
       <div class="container">
-        <div class="row strip-row">
-          <div class="col-sm-12 col-md-9">
-            <h3>Awesome MultiPurpose Template</h3>
-            <p class="first-para">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae semper nulla. Nunc tempus consequat blandit. Sed nec risus
-              sapien. Lorem ipsum dolor sit amet.
+        <div class="heading-div-1 text-center">
+          <h2>İstehlakçı Elektronika Məhsulları</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Smartfonlar</a></h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Mobil Aksesuarları</a></h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Planşet və Noutbuklar</a></h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Smart Saatlar</a></h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Qulaqlıqlar</a></h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
+            <div class="services-div">
+              <h5><a href="#">Ev Üçün Elektronika</a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--================================= HOME-EQUIP ENDS ==========================================-->
+
+    <!--================================= IND-EQUIP START ==========================================-->
+    <section class="section-padding bgimage-property" id="">
+      <div class="container">
+        <div class="heading-div-1 text-center">
+          <h2>Sənaye və Ticarət Məhsulları (Professional Modellər)</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="services-div">
+            <h5><a href="#">Sənaye Tipli Televizorlar (Business TV)</a></h5>
+            <p class="content-top-space1">
+              Otellər, ofislər və sərgi mərkəzləri üçün nəzərdə tutulmuş,
+              uzunmüddətli işləmə qabiliyyətinə malik professional ekranlar.
             </p>
           </div>
-          <div class="col-sm-12 col-md-3">
-            <div class="strip-btn">
-              <a href="#" class="btn btn-1">Buy Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================================= HEADER STRIP END ==========================================-->
 
-    <!--================================= FORM SECTION START ==========================================-->
-    <div class="section-padding section-2-bg" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 contact-img" id="canvas1">
-            <iframe
-              id="map_canvas1"
-              class="contact-frame"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988853.8283661404!2d-109.79819478383385!3d42.98243242389649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875ee23448e12e69%3A0x26b02279d27d382f!2sWyoming%2C+USA!5e0!3m2!1sen!2sin!4v1444977908624"
-              allowfullscreen
-            ></iframe>
+          <div class="services-div">
+            <h5><a href="#">Sənaye Soyuducuları</a></h5>
+            <p class="content-top-space1">
+              Mağazalar, restoranlar və digər kommersiya obyektləri üçün nəzərdə
+              tutulmuş, yüksək tutumlu və davamlı soyuducu modelləri.
+            </p>
           </div>
-          <div class="col-sm-6">
-            <div class="form-col-1 no-padding">
-              <form class="contact-form-1" method="POST">
-                <div class="form-div-1">
-                  <input
-                    class="form-input"
-                    type="text"
-                    name="name"
-                    value=""
-                    placeholder="Please Enter Name"
-                    required
-                    autocomplete="off"
-                  />
-                </div>
-                <div class="form-div-1">
-                  <input
-                    class="form-input"
-                    type="email"
-                    name="email"
-                    value=""
-                    placeholder="Please Enter Email"
-                    required
-                    autocomplete="off"
-                  />
-                </div>
-                <div class="form-div-1">
-                  <input
-                    class="form-input"
-                    type="text"
-                    name="phone"
-                    value=""
-                    placeholder="Please Enter Phone"
-                    required
-                    autocomplete="off"
-                    onkeypress="return isNumber(event)"
-                    maxlength="10"
-                  />
-                </div>
-                <div class="form-div-1">
-                  <textarea
-                    class="form-message"
-                    name="message"
-                    cols="40"
-                    rows="3"
-                    placeholder="Please Enter Message"
-                    required
-                    autocomplete="off"
-                  ></textarea>
-                </div>
-                <div class="button form-btn text-left">
-                  <button type="submit" class="btn btn-1 submit">Submit</button>
-                </div>
-                <div class="messageDiv">
-                  <span class="sucessMessage"> </span>
-                  <span class="failMessage"> </span>
-                </div>
-              </form>
-            </div>
+
+          <div class="services-div">
+            <h5><a href="#">Kondisionerlər (Kommersiya Tipli)</a></h5>
+            <p class="content-top-space1">
+              Böyük məkanlar üçün güclü soyutma və havalandırma sistemləri, VRF
+              və split sistemlər.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Sənaye Tipli Tozsoranlar</a></h5>
+            <p class="content-top-space1">
+              Geniş sahələrin və ofislərin təmizlənməsi üçün nəzərdə tutulmuş
+              yüksək gücə və filtrasiya qabiliyyətinə malik tozsoran modelləri.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Planşetlər (Biznes Seriyası)</a></h5>
+            <p class="content-top-space1">
+              Logistik, anbar, satış və servis sahələri üçün dayanıqlı,
+              uzunömürlü, təhlükəsiz və idarəetməsi asan olan modellər.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
+            <p class="content-top-space1">
+              Suya, toza və zərbəyə davamlı, xüsusi şəbəkə və təhlükəsizlik
+              dəstəyi ilə təchiz olunmuş peşəkar modellər.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-    <!--================================= FORM SECTION ENDS ==========================================-->
+    </section>
+
+    <section class="section-padding bgimage-property" id="industrial-products">
+      <div class="container">
+        <div class="heading-div-1 text-center">
+          <h2>Sənaye və Ticarət Məhsulları (Professional Modellər)</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="services-div">
+            <h5><a href="#">Sənaye Tipli Televizorlar (Business TV)</a></h5>
+            <p class="content-top-space1">
+              Otellər, ofislər və sərgi mərkəzləri üçün nəzərdə tutulmuş,
+              uzunmüddətli işləmə qabiliyyətinə malik professional ekranlar.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Sənaye Soyuducuları</a></h5>
+            <p class="content-top-space1">
+              Mağazalar, restoranlar və digər kommersiya obyektləri üçün nəzərdə
+              tutulmuş, yüksək tutumlu və davamlı soyuducu modelləri.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Kondisionerlər (Kommersiya Tipli)</a></h5>
+            <p class="content-top-space1">
+              Böyük məkanlar üçün güclü soyutma və havalandırma sistemləri, VRF
+              və split sistemlər.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Sənaye Tipli Tozsoranlar</a></h5>
+            <p class="content-top-space1">
+              Geniş sahələrin və ofislərin təmizlənməsi üçün nəzərdə tutulmuş
+              yüksək gücə və filtrasiya qabiliyyətinə malik tozsoran modelləri.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Planşetlər (Biznes Seriyası)</a></h5>
+            <p class="content-top-space1">
+              Logistik, anbar, satış və servis sahələri üçün dayanıqlı,
+              uzunömürlü, təhlükəsiz və idarəetməsi asan olan modellər.
+            </p>
+          </div>
+
+          <div class="services-div">
+            <h5><a href="#">Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
+            <p class="content-top-space1">
+              Suya, toza və zərbəyə davamlı, xüsusi şəbəkə və təhlükəsizlik
+              dəstəyi ilə təchiz olunmuş peşəkar modellər.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      #industrial-products .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px 32px; /* 24px row-gap, 32px column-gap */
+        justify-items: center;
+        text-align: center;
+      }
+
+      #industrial-products .services-div {
+        /* text-align: left; */
+        max-width: 320px;
+      }
+
+      #industrial-products .services-div p {
+        text-align: justify;
+        margin-top: 8px;
+      }
+
+      /* Optional: center heading */
+      .heading-div-1 {
+        margin-bottom: 2rem;
+      }
+    </style>
+
+    <!--================================= IND-EQUIP ENDS ==========================================-->
 
     <!--================================= FOOTER-1 START ==========================================-->
     <div class="footer-section section-padding">

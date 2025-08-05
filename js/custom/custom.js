@@ -61,6 +61,20 @@ $(document).on("ready", function () {
     });
   }
 
+  // Smooth scrolling for .btn links
+  $(".btn").on("click", function (event) {
+    var hash_tag = $(this).attr("href");
+    if (hash_tag && hash_tag.startsWith("#") && $(hash_tag).length) {
+      event.preventDefault();
+      $("html, body").animate(
+        {
+          scrollTop: $(hash_tag).offset().top - 50,
+        },
+        2000
+      );
+    }
+  });
+
   //COUNTER
   var counter = $(".count");
   if (counter.length) {
