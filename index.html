@@ -1,770 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Пробный сайт</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Black White</title>
-    <!-- FAVICON LINK -->
-    <link rel="shortcut icon" href="images/favicon.html" type="image/x-icon" />
-    <!-- STYLESHEETS -->
-    <!-- BOOTSTRAP CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/bootstrap.min.css"
+    <meta
+      name="description"
+      content="Пробный сайт. Если понравилось — свяжитесь со мной."
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/bootstrap-theme.min.css"
-    />
-    <!-- FONT AWESOME -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/font-awesome/css/font-awesome.min.css"
-    />
-    <!-- MAGNIFIC LIGHT BOX -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/magnific/magnific-popup.css"
-    />
-    <!-- CAROUSEL STYLE LINK -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/owl-carousel/owl.carousel.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/owl-carousel/owl.theme.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/vendor/owl-carousel/carousel.css"
-    />
-    <!-- CUSTOM CSS -->
-    <link rel="stylesheet" type="text/css" href="css/custom/style.css" />
     <style>
-      .equal-height-row {
+      :root {
+        --bg: #ffffff;
+        --fg: #111111;
+        --muted: #555;
+        --accent: #0b6dff;
+        --accent-hover: #0856c7;
+        --card: #f3f4f6;
+        --border: #e5e7eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b0b0c;
+          --fg: #f6f7f8;
+          --muted: #bbb;
+          --accent: #6aa8ff;
+          --accent-hover: #92c0ff;
+          --card: #141518;
+          --border: #24262a;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        display: flex;
+        min-height: 100dvh;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(28px, 4vw, 40px);
+        letter-spacing: 0.2px;
+      }
+      p.lead {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: clamp(16px, 2.2vw, 18px);
+      }
+      .actions {
         display: flex;
         flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
       }
-      .equal-height-col {
-        display: flex;
-        flex-direction: column;
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        color: var(--fg);
+        padding: 12px 18px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.2s;
       }
-      .three-col-div {
-        flex: 1; /* stretch to equal height */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* optional, keeps button at bottom */
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn.primary {
+        background: var(--accent);
+        color: #fff;
+        border-color: transparent;
+      }
+      .btn.primary:hover {
+        background: var(--accent-hover);
+      }
+      footer {
+        margin-top: 28px;
+        font-size: 13px;
+        color: var(--muted);
       }
     </style>
   </head>
-  <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
-    <!--================================= NAVIGATION START ==========================================-->
-    <header>
-      <nav
-        class="topbar navbar navbar-default navbar-fixed-top clearfix"
-        id="top-nav"
-      >
-        <div class="container">
-          <div class="logo-image">
-            <a href="#"><img src="images/big-logo.avif" alt="150x50" /></a>
-          </div>
-          <div class="navbar-right nav">
-            <div class="navbar-header">
-              <button
-                type="button"
-                class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
-                aria-expanded="false"
-              >
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div
-              class="collapse navbar-collapse"
-              id="bs-example-navbar-collapse-1"
-            >
-              <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav" id="menu_1">
-                  <li class="menu">
-                    <a href="#home" class="pagescroll"> Home </a>
-                  </li>
-                  <li class="menu">
-                    <a href="#services" class="pagescroll"> Services </a>
-                  </li>
-                  <li class="menu">
-                    <a href="#testimonial" class="pagescroll"> Testimonial </a>
-                  </li>
-                  <li class="menu">
-                    <a href="#news" class="pagescroll"> News </a>
-                  </li>
-                  <li class="menu">
-                    <a href="#contact" class="pagescroll"> Contact </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- /.navbar-collapse -->
-        </div>
-      </nav>
-    </header>
-    <!--================================= NAVIGATION END ==========================================-->
-    <!--=================================  HEADER-1 START ==========================================-->
-    <header>
-      <div class="header-bgimage-1 bgimage-property clearfix" id="home">
-        <div class="container">
-          <div class="col-sm-12 header-div-1 header-padding text-center">
-            <h1>Missiyamız</h1>
-            <h2>
-              Azərbaycanda hər bir biznes üçün dünya səviyyəli elektronikanı
-              əlçatan, münasib və etibarlı etmək.
-            </h2>
-            <!-- <p class="second-para">Azərbaycanda hər bir biznes üçün dünya səviyyəli elektronikanı əlçatan, münasib və etibarlı etmək.</p> -->
-            <div class="header-btn">
-              <a href="#about-us" class="btn btn-1">Ətraflı</a>
-            </div>
-          </div>
-        </div>
+  <body>
+    <main class="card" role="main">
+      <h1>Это был пробный сайт</h1>
+      <p class="lead">
+        Если он вам понравился, вы можете связаться со мной удобным способом
+        ниже.
+      </p>
+
+      <div class="actions" role="group" aria-label="Варианты связи">
+        <!-- Замените почту, телефон и ссылки на свои -->
+        <!-- <a
+          class="btn primary"
+          href="mailto:you@example.com?subject=Интерес к вашему сайту"
+          >Написать на почту</a
+        > -->
+        <a class="btn primary" href="tel:++994709966399">Позвонить</a>
+        <!-- <a
+          class="btn"
+          href="https://t.me/your_username"
+          target="_blank"
+          rel="noopener"
+          >Telegram</a
+        > -->
+        <a
+          class="btn"
+          href="https://wa.me/994709966399"
+          target="_blank"
+          rel="noopener"
+          >WhatsApp</a
+        >
       </div>
-    </header>
-    <!--================================= HEADER-1 ENDS ============================================-->
 
-    <!--================================= ABOUT-US-1 START ==========================================-->
-    <section class="section-2-bg two-left-right-bg" id="about-us">
-      <div class="container-fluid">
-        <div class="row">
-          <div
-            class="col-sm-12 col-md-6 two-left-bgimage bgimage-property"
-          ></div>
-          <div class="container">
-            <div class="col-sm-12 col-md-6 two-left-div">
-              <h3>Haqqqımızda</h3>
-              <div class="underline-1"></div>
-              <p class="content-top-space">
-                ADIT, Bakı, Azərbaycan mərkəzli aparıcı elektronika paylayıcı
-                şirkətdir və yüksək keyfiyyətli istehlak və sənaye elektronikası
-                məhsullarının təchizatı üzrə ixtisaslaşıb. Biz Samsung, Apple,
-                Philips və Xiaomi məhsullarının rəsmi distribyutorları olaraq,
-                ölkə daxilində və geniş Qafqaz regionunda bizneslərə, pərakəndə
-                satış şəbəkələrinə və müəssisələrə xidmət göstəririk.
-              </p>
-              <p class="content-top-space">
-                Keyfiyyətə, şəffaflığa və uzunmüddətli tərəfdaşlıqlara böyük
-                önəm verərək, yalnız məhsullar deyil, tam həllər təqdim edirik.
-              </p>
-              <div class="btn-top-space">
-                <a href="#" class="btn btn-1">Ətraflı</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row two-right-main">
-          <div class="col-sm-12 col-md-6 two-right-div">
-            <h3>Haqqqımızda</h3>
-            <div class="underline-1"></div>
-            <p class="content-top-space">
-              ADIT, Bakı, Azərbaycan mərkəzli aparıcı elektronika paylayıcı
-              şirkətdir və yüksək keyfiyyətli istehlak və sənaye elektronikası
-              məhsullarının təchizatı üzrə ixtisaslaşıb. Biz Samsung, Apple,
-              Philips və Xiaomi məhsullarının rəsmi distribyutorları olaraq,
-              ölkə daxilində və geniş Qafqaz regionunda bizneslərə, pərakəndə
-              satış şəbəkələrinə və müəssisələrə xidmət göstəririk.
-            </p>
-            <p class="content-top-space">
-              Keyfiyyətə, şəffaflığa və uzunmüddətli tərəfdaşlıqlara böyük önəm
-              verərək, yalnız məhsullar deyil, tam həllər təqdim edirik.
-            </p>
-            <div class="btn-top-space">
-              <a href="#" class="btn btn-1">Ətraflı</a>
-            </div>
-          </div>
-          <div
-            class="col-sm-12 col-md-6 two-right-bgimage bgimage-property"
-          ></div>
-        </div>
-      </div>
-    </section>
-    <!--================================= ABOUT-US-1 ENDS ==========================================-->
-
-    <!--================================= TWO COLUMN START ==========================================-->
-    <section class="section-padding section-2-bg">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Nə ilə fərqlənirik?</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row equal-height-row">
-          <div class="col-sm-6 three-col section-space equal-height-col">
-            <div class="three-img">
-              <img
-                src="images/750x500x1.jpg"
-                alt="750x500x1"
-                class="img-responsive"
-              />
-            </div>
-            <div class="three-col-div">
-              <div>
-                <h4>Rəsmi Tərəfdaşlıqlar</h4>
-                <p class="content-top-space1">
-                  Apple, Samsung, Philips və Xiaomi-nin səlahiyyətli
-                  distribyutorları ilə birbaşa əməkdaşlıq edərək,
-                  müştərilərimizə orijinal və zəmanətli məhsulların
-                  çatdırılmasını təmin edirik.
-                </p>
-              </div>
-              <div class="btn-top-space">
-                <a href="#" class="btn btn-1">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 three-col section-space equal-height-col">
-            <div class="three-img">
-              <img
-                src="images/750x500x2.jpg"
-                alt="750x500x2"
-                class="img-responsive"
-              />
-            </div>
-            <div class="three-col-div">
-              <div>
-                <h4>Müştəriyə Yönəlik Xidmət</h4>
-
-                <div class="hide-content">
-                  <p class="content-top-space1">
-                    Müştərilərimizi işimizin prioriteti olaraq qəbul edir və
-                    onların fərdi ehtiyaclarına uyğun yüksək səviyyəli xidmət və
-                    dəstək göstəririk.
-                  </p>
-                </div>
-              </div>
-              <div class="btn-top-space">
-                <a href="#" class="btn btn-1">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= TWO COLUMN ENDS ==========================================-->
-
-    <!--================================= VALUES-1 START ==========================================-->
-    <section class="section-padding section-1-bg">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Əsas Dəyərlərimiz</h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row">
-          <div
-            class="col-sm-12 col-md-6 col-md-push-6 features-image res-space"
-          >
-            <img
-              src="images/555x590.jpg"
-              alt="555x590"
-              class="img-responsive"
-            />
-          </div>
-          <div class="col-sm-12 col-md-6 col-md-pull-6 features-col">
-            <ul class="list-ul content-ul">
-              <li class="content-li">
-                <div class="list-div">
-                  <div class="list-div-left">
-                    <img src="images/quality.png" alt="Keyfiyyət" />
-                  </div>
-                  <div class="list-div-body">
-                    <h4><a href="#">Keyfiyyət</a></h4>
-                    <p class="content-top-space-2">
-                      Yüksək performanslı və tam yoxlanılmış məhsullar təqdim
-                      edirik; bütün təchizatımız beynəlxalq sənaye
-                      standartlarına tam uyğundur.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="content-li">
-                <div class="list-div">
-                  <div class="list-div-left">
-                    <img src="images/trust.png" alt="Etibarlılıq" />
-                  </div>
-                  <div class="list-div-body">
-                    <h4><a href="#">Etibarlılıq</a></h4>
-                    <p class="content-top-space-2">
-                      Tərəfdaşlıq münasibətlərini şəffaflıq, dürüstlük və
-                      davamlı xidmət prinsipləri ilə qurur, uzunmüddətli
-                      əməkdaşlığa zəmanət veririk.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="content-li">
-                <div class="list-div">
-                  <div class="list-div-left">
-                    <img src="images/stability.png" alt="Sabitlik" />
-                  </div>
-                  <div class="list-div-body">
-                    <h4><a href="#">Sabitlik</a></h4>
-                    <p class="content-top-space-2">
-                      Hər bir sifarişi vaxtında və ideal vəziyyətdə çatdırmaqla
-                      tərəfdaşlarımızın fəaliyyətinə fasiləsiz dəstək
-                      göstəririk.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="content-li">
-                <div class="list-div">
-                  <div class="list-div-left">
-                    <img src="images/innovation.png" alt="İnnovasiya" />
-                  </div>
-                  <div class="list-div-body">
-                    <h4><a href="#">İnnovasiya</a></h4>
-                    <p class="content-top-space-2">
-                      Bazardakı yenilikləri yaxından izləyir, məhsul və
-                      xidmətlərimizi daim təkmilləşdirərək müştərilərimizə
-                      qabaqcıl texnologiyalar təqdim edirik.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--================================= VALUES-1 ENDS ==========================================-->
-
-    <!--================================= PARTNERS-1 START ==========================================-->
-    <div class="section-2-bg section-padding">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>
-            Rəsmi Distribyusiya
-            <br />
-            V PARTNERS
-          </h2>
-          <div class="underline"></div>
-        </div>
-        <div class="row client-row">
-          <div
-            class="col-xs-6 col-sm-3 clients-res-space onecolumn-res clients-res-space1"
-          >
-            <img
-              src="images/samsung.avif"
-              alt="280x200x1"
-              class="img-responsive"
-            />
-          </div>
-          <div
-            class="col-xs-6 col-sm-3 clients-res-space onecolumn-res clients-res-space1"
-          >
-            <img
-              src="images/apple.jpg"
-              alt="280x200x2"
-              class="img-responsive"
-            />
-          </div>
-          <div class="col-xs-6 col-sm-3 onecolumn-res clients-res-space1">
-            <img
-              src="images/philips.jpg"
-              alt="280x200x3"
-              class="img-responsive"
-            />
-          </div>
-          <div class="col-xs-6 col-sm-3 onecolumn-res">
-            <img
-              src="images/xiaomi-4.svg"
-              alt="280x200x4"
-              class="img-responsive"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================================= PARTNERS-1 ENDS ==========================================-->
-
-    <!--================================= HOME-EQUIP START ==========================================-->
-    <section class="section-padding bgimage-property" id="services">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>İstehlakçı Elektronika Məhsulları</h2>
-          <div class="underline"></div>
-        </div>
-
-        <div class="row text-center">
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Smartfonlar</a></h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Mobil Aksesuarları</a></h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Planşet və Noutbuklar</a></h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Smart Saatlar</a></h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Qulaqlıqlar</a></h5>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 services-space">
-            <div class="services-div">
-              <h5><a href="#">Ev Üçün Elektronika</a></h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--================================= HOME-EQUIP ENDS ==========================================-->
-
-    <!--================================= IND-EQUIP START ==========================================-->
-    <section class="section-padding bgimage-property" id="">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Sənaye və Ticarət Məhsulları (Professional Modellər)</h2>
-          <div class="underline"></div>
-        </div>
-
-        <div class="services-grid">
-          <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Televizorlar (Business TV)</a></h5>
-            <p class="content-top-space1">
-              Otellər, ofislər və sərgi mərkəzləri üçün nəzərdə tutulmuş,
-              uzunmüddətli işləmə qabiliyyətinə malik professional ekranlar.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Sənaye Soyuducuları</a></h5>
-            <p class="content-top-space1">
-              Mağazalar, restoranlar və digər kommersiya obyektləri üçün nəzərdə
-              tutulmuş, yüksək tutumlu və davamlı soyuducu modelləri.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Kondisionerlər (Kommersiya Tipli)</a></h5>
-            <p class="content-top-space1">
-              Böyük məkanlar üçün güclü soyutma və havalandırma sistemləri, VRF
-              və split sistemlər.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Tozsoranlar</a></h5>
-            <p class="content-top-space1">
-              Geniş sahələrin və ofislərin təmizlənməsi üçün nəzərdə tutulmuş
-              yüksək gücə və filtrasiya qabiliyyətinə malik tozsoran modelləri.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Planşetlər (Biznes Seriyası)</a></h5>
-            <p class="content-top-space1">
-              Logistik, anbar, satış və servis sahələri üçün dayanıqlı,
-              uzunömürlü, təhlükəsiz və idarəetməsi asan olan modellər.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
-            <p class="content-top-space1">
-              Suya, toza və zərbəyə davamlı, xüsusi şəbəkə və təhlükəsizlik
-              dəstəyi ilə təchiz olunmuş peşəkar modellər.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-padding bgimage-property" id="industrial-products">
-      <div class="container">
-        <div class="heading-div-1 text-center">
-          <h2>Sənaye və Ticarət Məhsulları (Professional Modellər)</h2>
-          <div class="underline"></div>
-        </div>
-
-        <div class="services-grid">
-          <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Televizorlar (Business TV)</a></h5>
-            <p class="content-top-space1">
-              Otellər, ofislər və sərgi mərkəzləri üçün nəzərdə tutulmuş,
-              uzunmüddətli işləmə qabiliyyətinə malik professional ekranlar.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Sənaye Soyuducuları</a></h5>
-            <p class="content-top-space1">
-              Mağazalar, restoranlar və digər kommersiya obyektləri üçün nəzərdə
-              tutulmuş, yüksək tutumlu və davamlı soyuducu modelləri.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Kondisionerlər (Kommersiya Tipli)</a></h5>
-            <p class="content-top-space1">
-              Böyük məkanlar üçün güclü soyutma və havalandırma sistemləri, VRF
-              və split sistemlər.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Tozsoranlar</a></h5>
-            <p class="content-top-space1">
-              Geniş sahələrin və ofislərin təmizlənməsi üçün nəzərdə tutulmuş
-              yüksək gücə və filtrasiya qabiliyyətinə malik tozsoran modelləri.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Planşetlər (Biznes Seriyası)</a></h5>
-            <p class="content-top-space1">
-              Logistik, anbar, satış və servis sahələri üçün dayanıqlı,
-              uzunömürlü, təhlükəsiz və idarəetməsi asan olan modellər.
-            </p>
-          </div>
-
-          <div class="services-div">
-            <h5><a href="#">Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
-            <p class="content-top-space1">
-              Suya, toza və zərbəyə davamlı, xüsusi şəbəkə və təhlükəsizlik
-              dəstəyi ilə təchiz olunmuş peşəkar modellər.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <style>
-      #industrial-products .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px 32px; /* 24px row-gap, 32px column-gap */
-        justify-items: center;
-        text-align: center;
-      }
-
-      #industrial-products .services-div {
-        /* text-align: left; */
-        max-width: 320px;
-      }
-
-      #industrial-products .services-div p {
-        text-align: justify;
-        margin-top: 8px;
-      }
-
-      /* Optional: center heading */
-      .heading-div-1 {
-        margin-bottom: 2rem;
-      }
-    </style>
-
-    <!--================================= IND-EQUIP ENDS ==========================================-->
-
-    <!--================================= FOOTER-1 START ==========================================-->
-    <div class="footer-section section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4 footer-col">
-            <div class="footer-logo">
-              <a href="#"
-                ><img
-                  src="images/250x80.png"
-                  alt="250x80"
-                  class="img-responsive"
-              /></a>
-            </div>
-            <h4>About Us</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              vitae semper nulla. Nunc tempus consequat blandit. Sed nec risus
-              sapien.
-            </p>
-          </div>
-          <div class="col-sm-4 footer-col-1">
-            <div id="mc_embed_signup" class="subscribe-form">
-              <h4>Subscribe Here</h4>
-              <form
-                action="http://evethemes.us11.list-manage.com/subscribe/post?u=a795532c55a578843e04b09c0&amp;id=fa362f029a"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                class="validate form7 clearfix"
-                novalidate
-              >
-                <input
-                  class="subscribe-input"
-                  type="email"
-                  name="EMAIL"
-                  value=""
-                  id="mce-EMAIL"
-                  placeholder="Please Enter Email"
-                />
-                <div class="subscribe-btn">
-                  <button
-                    class="btn btn-1"
-                    id="mc-embedded-subscribe"
-                    type="submit"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-
-                <div id="mce-responses">
-                  <div
-                    class="response response-msg"
-                    id="mce-error-response"
-                  ></div>
-                  <div
-                    class="response response-msg"
-                    id="mce-success-response"
-                  ></div>
-                </div>
-              </form>
-              <div id="ResultMsg" class="message">
-                <p class="SuccessMsg"></p>
-                <p class="FailureMsg"></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="contact-div">
-              <ul class="content-ul contact-address contact-address-space">
-                <li><img src="images/32x32x5.png" alt="32x32x5" /></li>
-                <li>
-                  <p><a href="#">company@mail.com</a></p>
-                </li>
-              </ul>
-              <ul class="content-ul contact-address contact-address-space">
-                <li><img src="images/32x32x6.png" alt="32x32x6" /></li>
-                <li>
-                  <p>123, Majestic Hall, New York, USA.</p>
-                </li>
-              </ul>
-              <ul class="content-ul contact-address contact-address-space">
-                <li><img src="images/32x32x7.png" alt="32x32x7" /></li>
-                <li>
-                  <p><a href="#">www.website.com</a></p>
-                </li>
-              </ul>
-              <ul class="content-ul contact-address">
-                <li><img src="images/32x32x8.png" alt="32x32x8" /></li>
-                <li>
-                  <p>+01 234 567 8910</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="content-ul footer1-icon">
-              <li>
-                <a href="#"><img src="images/40x40x1.png" alt="40x40x1" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/40x40x2.png" alt="40x40x2" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/40x40x3.png" alt="40x40x3" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/40x40x4.png" alt="40x40x4" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="images/40x40x5.png" alt="40x40x5" /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--================================= FOOTER-1 END ==========================================-->
-
-    <!--================================= COPYRIGHT-1 START ==========================================-->
-    <footer class="copyright-bg">
-      <div class="container copyright text-center">
-        <p>2017 &copy; All Rights Reserved</p>
-      </div>
-    </footer>
-    <!--================================= COPYRIGHT-1 END ==========================================-->
-    <!-- JQUERY LIBRARY -->
-    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-    <!-- BOOTSTRAP -->
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-    <!-- SLIDER JS FILES -->
-    <script
-      type="text/javascript"
-      src="js/vendor/slider/owl.carousel.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="js/vendor/slider/owl-slider.js"
-    ></script>
-    <!-- COUNTER JS FILES -->
-    <script
-      type="text/javascript"
-      src="js/vendor/counter/counter-lib.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="js/vendor/counter/jquery.counterup.min.js"
-    ></script>
-    <!-- MAGNIFIC LIGHT BOX -->
-    <script
-      type="text/javascript"
-      src="js/vendor/magnific/jquery.magnific-popup.js"
-    ></script>
-    <!-- SUBSCRIBE MAILCHIMP -->
-    <script
-      type="text/javascript"
-      src="js/vendor/subscribe/subscribe_validate.js"
-    ></script>
-    <!-- FORM VALIDATION -->
-    <script
-      type="text/javascript"
-      src="js/vendor/validate/jquery.validate.min.js"
-    ></script>
-    <!-- SHUFFLE JS FILES -->
-    <script
-      type="text/javascript"
-      src="js/vendor/shuffle/modernizr.custom.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="js/vendor/shuffle/jquery.shuffle.js"
-    ></script>
-    <script type="text/javascript" src="js/vendor/shuffle/page.js"></script>
-    <script
-      type="text/javascript"
-      src="js/vendor/shuffle/evenheights.js"
-    ></script>
-    <script type="text/javascript" src="js/vendor/shuffle/homepage.js"></script>
-    <!-- NUMBER VALIDATION JS FILES -->
-    <script type="text/javascript" src="js/vendor/number.js"></script>
-    <!-- THEME JS -->
-    <script type="text/javascript" src="js/custom/custom.js"></script>
+      <footer>© 2025 Музаффар Мустафаев. Все права защищены.</footer>
+    </main>
   </body>
 </html>
