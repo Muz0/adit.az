@@ -127,9 +127,6 @@ h6 {
   line-height: 25px;
   /* text-transform: capitalize; */
 }
-.navbar-default .navbar-nav > li > a {
-  /* text-transform: uppercase; */
-}
 .text-center {
   text-align: center;
 }
@@ -139,8 +136,6 @@ h6 {
 .text-right {
   text-align: right;
 }
-
-
 
 /*========================================== 1.GLOBAL CSS END ===========================================*/
 /*========================================== 2.COMMON CSS START ===========================================*/
@@ -156,6 +151,11 @@ h6 {
 .section-1-bg {
   background-color: #fafafa;
 }
+
+.section-1-bg img {
+  width: 100%;
+}
+
 .section-2-bg {
   background-color: #f2f2f2;
 }
@@ -1670,7 +1670,6 @@ textarea:focus {
 }
 /*========================================== 17.FOOTER END ===========================================*/
 /*========================================== 18.MEDIA QUERIES START ===========================================*/
-
 @media only screen and (min-width: 250px) and (max-width: 767px) {
   .navbar-nav > li > a {
     font-size: 13px;
@@ -1724,8 +1723,7 @@ textarea:focus {
     margin-bottom: 30px;
   }
   .client-row {
-    margin: 0 auto;
-    width: 80%;
+    flex-wrap: wrap;
   }
   .strip-btn {
     margin-top: 20px;
@@ -1739,16 +1737,13 @@ textarea:focus {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .contact-img,
   .counter-space1 {
     margin-bottom: 30px;
   }
-
   .news-img {
     margin-bottom: 25px;
   }
-
   .footer-col-1 {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1822,6 +1817,7 @@ textarea:focus {
     width: 100%;
   }
 }
+
 @media only screen and (min-width: 250px) and (max-width: 991px) {
   .navbar-right.nav {
     padding-bottom: 0 !important;
@@ -1871,6 +1867,7 @@ textarea:focus {
     line-height: 22px;
   }
 }
+
 @media only screen and (min-width: 250px) and (max-width: 479px) {
   .onecolumn-res {
     margin: 0 auto;
@@ -1889,37 +1886,34 @@ textarea:focus {
   .footer1-icon li {
     margin-right: 5px;
   }
-
   .services-space-2,
   .clients-res-space1 {
     margin-bottom: 30px;
   }
 }
+
 @media only screen and (min-width: 250px) and (max-width: 400px) {
   .content:hover .content-details {
     top: 85%;
   }
 }
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .services-space-1 {
     margin-top: 30px;
   }
-
   .services-row .col-md-3:nth-child(3),
   .services-row .col-md-3:nth-child(7) {
     clear: both;
   }
-
   .price-table-col,
   .team-col {
     margin: 0 auto;
     width: 360px;
   }
-
   .team-col-1 {
     padding-bottom: 30px;
   }
-
   .price-line:hover .price-line-common.light:before,
   .price-line:hover .price-line-common.light:after {
     border-bottom-color: transparent;
@@ -1935,22 +1929,74 @@ textarea:focus {
     padding-right: 15px;
   }
 }
+/* === Global logo styles === */
+.client-row {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  justify-content: center; /* center logos horizontally */
+  align-items: center; /* center logos vertically */
+  color: black;
+  margin: 0 -10px;
+}
 
+/* Container div for logos that should shrink to fit content (e.g., Apple) */
+.clients-res-space1 {
+  display: inline-flex; /* shrink-wrap to SVG content */
+  align-items: center; /* vertically center */
+  justify-content: center; /* horizontally center */
+  padding: 10px;
+  width: auto; /* fit SVG width */
+}
+
+/* All SVG logos */
+.clients-res-space1 svg,
+.client-row svg {
+  display: block; /* remove inline whitespace */
+  height: 60px; /* consistent height */
+  width: auto; /* maintain aspect ratio */
+  max-width: none; /* ignore container limits */
+  object-fit: contain;
+  color: black; /* ensures currentColor works if used in SVG */
+}
+
+/* Standard container divs for logos */
+.client-row > div {
+  text-align: center;
+  padding: 10px;
+}
+
+/* === Mobile: up to 767px === */
+@media only screen and (max-width: 767px) {
+  .client-row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* === Tablet: 768px to 991px === */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single-column-res {
+  .client-row {
+    flex-wrap: wrap;
+  }
+  .client-row > div {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .two-right-div {
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 750px;
     width: 100%;
   }
-  .single-column-res-pull {
-    margin: 0 auto;
-    width: 100%;
-    right: 0;
-  }
+  .single-column-res,
+  .single-column-res-pull,
   .single-column-res-push,
   .col-sm-push-6.col-sm-6.business2-col {
     margin: 0 auto;
     width: 100%;
     left: 0;
+    right: 0;
   }
   .nav > li > a {
     display: block;
@@ -1980,13 +2026,6 @@ textarea:focus {
   .strip-row .col-sm-12 {
     padding: 0;
   }
-  .two-right-div {
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 750px;
-  }
-
   .services-space-3 {
     margin-bottom: 30px;
   }
@@ -2000,11 +2039,19 @@ textarea:focus {
   .content:hover .content-details {
     top: 83%;
   }
-
   .header-div-3 {
     padding-top: 50px;
   }
 }
+
+/* === Desktop: 992px and above === */
+@media only screen and (min-width: 992px) {
+  .client-row > div {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .strip-row {
     width: 100%;
