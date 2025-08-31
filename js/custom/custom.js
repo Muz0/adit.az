@@ -47,7 +47,7 @@ $(document).on("ready", function () {
   if (menu_list.length) {
     menu_list.on("click", ".pagescroll", function (event) {
       event.stopPropagation();
-      event.preventDefault();
+      // event.preventDefault(); // need for default link click
       var hash_tag = $(this).attr("href");
       if ($(hash_tag).length) {
         $("html, body").animate(
