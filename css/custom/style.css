@@ -347,6 +347,7 @@ h6 {
   font-weight: bold;
   letter-spacing: 1px;
   outline: none;
+  margin: 15px 0;
   padding: 10px 15px;
   /* text-transform: capitalize; */
 }
@@ -854,18 +855,22 @@ h6 {
 .equal-height-row {
   display: flex;
   flex-wrap: wrap;
+  margin: -15px; /* gutter fix if using Bootstrap */
 }
 .equal-height-col {
   display: flex;
   flex-direction: column;
+  padding: 15px; /* gutter fix */
 }
 .three-col-div {
-  flex: 1; /* stretch to equal height */
+  flex: 1; /* make text box stretch equal */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* optional, keeps button at bottom */
 }
+.three-col-div .btn-top-space {
+  margin-top: auto; /* push button to bottom */
+}
+
 /*========================================== 7.THREE COLUMN END ===========================================*/
 /*========================================== 8.TWO COLUMN START ===========================================*/
 /*features*/
