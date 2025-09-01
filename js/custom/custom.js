@@ -11,26 +11,28 @@ $(document).on("ready", function () {
   var menu_bar = $(".navbar-default");
   var menu_li = $(".navbar-nav li a");
   var collapse = $(".navbar-collapse");
-  var top_nav = $("#top-nav");
+  // var top_nav = $("#top-nav");
   var top_menu = $(".header-menu-1");
 
   //MENU-2 SCROLL
-  if (top_nav.length) {
-    var x = top_nav.offset().top;
-    if (x > 50) {
-      top_nav.fadeIn();
-    } else {
-      top_nav.fadeOut();
-    }
-    $(document).on("scroll", function () {
-      var y = $(this).scrollTop();
-      if (y > 50) {
-        top_nav.fadeIn();
-      } else {
-        top_nav.fadeOut();
-      }
-    });
-  }
+  // if (top_nav.length) {
+  //   var x = top_nav.offset().top;
+  //   if (x > 50) {
+  //     top_nav.fadeIn();
+  //   } else {
+  //     top_nav.fadeOut();
+  //   }
+  //   $(document).on("scroll", function () {
+  //     var y = $(this).scrollTop();
+  //     if (y > 50) {
+  //       top_nav.fadeIn();
+  //     } else {
+  //       top_nav.fadeOut();
+  //     }
+  //   });
+  // }
+
+  // fade in menu has been disabled by request
 
   //RESPONSIVE MENU SHOW AND HIDE FUNCTION
   if (menu_li.length) {

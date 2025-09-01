@@ -389,8 +389,14 @@ h6 {
 
 .header-bgimage-1 {
   background-image: url("../../images/peakpx.jpg");
+  background-size: cover; /* scale to cover entire area */
+  background-position: center; /* keep it centered */
+  background-repeat: no-repeat; /* prevent tiling */
+  /* width: 100vw; full viewport width */
+  height: 100vh; /* full viewport height */
   position: relative;
 }
+
 .header-padding {
   padding-bottom: 200px;
   padding-top: 200px;
@@ -738,6 +744,33 @@ h6 {
 }
 
 /*========================================== 5.HEADER END ===========================================*/
+
+/* ============== LAYOUT - IND GRID ======================= */
+
+#industrial-products .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px 32px; /* 24px row-gap, 32px column-gap */
+  justify-items: center;
+  text-align: center;
+}
+
+#industrial-products .services-div {
+  /* text-align: left; */
+  max-width: 320px;
+}
+
+#industrial-products .services-div p {
+  text-align: justify;
+  margin-top: 8px;
+}
+
+/* Optional: center heading */
+.heading-div-1 {
+  margin-bottom: 2rem;
+}
+
+/* ======================== ======================== */
 /*========================================== 6.SERVICES START ===========================================*/
 
 .services-div {
@@ -816,6 +849,22 @@ h6 {
 }
 .three-col {
   position: relative;
+}
+
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.equal-height-col {
+  display: flex;
+  flex-direction: column;
+}
+.three-col-div {
+  flex: 1; /* stretch to equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* optional, keeps button at bottom */
 }
 /*========================================== 7.THREE COLUMN END ===========================================*/
 /*========================================== 8.TWO COLUMN START ===========================================*/
