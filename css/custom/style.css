@@ -1,55 +1,7 @@
-/*========================================== MASTER STYLESHEET ===================================================================
-
-	Project     :	WHITE TEMPLATES
-	Version     :	1.0
-	Last Change : 	19/08/2017
-	Primary Use :   WHITE TEMPLATES
-
-=================================================================================================================================*/
-/*========================================== LAYOUT ===================================================================
-
-		1.GLOBAL STYLES
-		2.COMMON STYLES	
-		3.NAVIGATION		
-		4.BUTTON	
-		5.HEADER
-		6.SERVICES
-		7.THREE COLUMN
-		8.TWO COLUMN
-		9.COUNTER
-		10.TESTIMONIAL
-		11.NEWS
-		12.PRICE TABLE
-		13.CONTACT
-		14.SUBSCRIBE
-		15.TEAM
-		16.GALLERY
-		17.FOOTER
-		18.MEDIA QUERIES
-
-=================================================================================================================================*/
-/*========================================== COLOR CODES =========================================================================
-
-	Background         :#ffffff [White]
-	Theme Color        :#1d1d1d and #212121 [Black]	
-	Main Heading Color :#ffffff [white]	
-	Content Color      :#ffffff [white]	
-
-======================================= ==========================================================================================*/
-/*========================================== TYPOGRAPHY =========================================================================
-
-	Heading:font-family: 'Montserrat', serif;	
-	Body :font-family: 'Open Sans', sans-serif , Arial , Vedana  , Trebuchet MS;
-
-=================================================================================================================================*/
-
-/* Define variables */
 :root {
   --light-gray: #666666;
   --dark-gray: #333333;
 }
-
-/*========================================== 1.GLOBAL CSS START ===========================================*/
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
@@ -80,7 +32,6 @@ h1 {
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 55px;
-  /* text-transform: capitalize; */
 }
 h2 {
   color: var(--dark-gray);
@@ -89,7 +40,6 @@ h2 {
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 45px;
-  /* text-transform: capitalize; */
 }
 h3 {
   color: var(--dark-gray);
@@ -98,7 +48,6 @@ h3 {
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 38px;
-  /* text-transform: capitalize; */
 }
 h4 {
   color: var(--dark-gray);
@@ -107,7 +56,6 @@ h4 {
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 32px;
-  /* text-transform: capitalize; */
 }
 h5 {
   color: var(--dark-gray);
@@ -116,7 +64,6 @@ h5 {
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 26px;
-  /* text-transform: capitalize; */
 }
 h6 {
   color: var(--dark-gray);
@@ -125,7 +72,6 @@ h6 {
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 25px;
-  /* text-transform: capitalize; */
 }
 .text-center {
   text-align: center;
@@ -136,9 +82,6 @@ h6 {
 .text-right {
   text-align: right;
 }
-
-/*========================================== 1.GLOBAL CSS END ===========================================*/
-/*========================================== 2.COMMON CSS START ===========================================*/
 
 .section-padding {
   padding-top: 80px;
@@ -203,7 +146,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 1px;
   padding-top: 10px;
-  /* text-transform: capitalize; */
 }
 .readmore:hover {
   color: #f94b71;
@@ -214,7 +156,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 1px;
   padding-top: 10px;
-  /* text-transform: capitalize; */
 }
 .readmore1:hover {
   color: var(--dark-gray);
@@ -238,8 +179,6 @@ h6 {
   height: 2px;
   margin: 5px 0 0 0;
 }
-/*========================================== 2.COMMON CSS END ===========================================*/
-/*========================================== 3.NAVIGATION START ===========================================*/
 
 .fixed-header {
   border-radius: 0;
@@ -333,8 +272,6 @@ h6 {
 .navbar-default .navbar-nav > .active > a:hover {
   background-color: transparent;
 }
-/*========================================== 3.NAVIGATION END ===========================================*/
-/*========================================== 4.BUTTON START ===========================================*/
 
 .btn {
   border: none;
@@ -349,7 +286,6 @@ h6 {
   outline: none;
   margin: 15px 0;
   padding: 10px 15px;
-  /* text-transform: capitalize; */
 }
 .btn.btn-1 {
   background-color: rgba(51, 51, 51, 0.9);
@@ -385,16 +321,14 @@ h6 {
   background-color: #dedede;
   color: var(--dark-gray);
 }
-/*========================================== 4.BUTTON END ===========================================*/
-/*========================================== 5.HEADER START ===========================================*/
 
 .header-bgimage-1 {
-  background-image: url("../../images/peakpx.jpg");
-  background-size: cover; /* scale to cover entire area */
-  background-position: center; /* keep it centered */
-  background-repeat: no-repeat; /* prevent tiling */
-  /* width: 100vw; full viewport width */
-  height: 100vh; /* full viewport height */
+  background-image: url("../../images/custom/rename_lights.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   position: relative;
 }
 
@@ -410,25 +344,15 @@ h6 {
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  /* text-transform: uppercase; */
 }
 .header-div-1 h2 {
   color: #ffffff;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
-.header-bgimage-1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.664); /* tweak alpha for balance */
-  z-index: 1;
-}
+
 .header-div-1 {
   position: relative;
-  z-index: 2; /* ensures text sits above overlay */
+  z-index: 2;
 }
 
 .header-div-1 h1 span {
@@ -440,7 +364,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  /* text-transform: uppercase; */
 }
 .header-bgimage-1 .second-para {
   color: var(--dark-gray);
@@ -455,7 +378,6 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
 }
 .header-div-1 .btn-1:focus,
 .header-div-1 .btn-1:hover {
@@ -473,7 +395,6 @@ h6 {
   padding-top: 100px;
 }
 
-/*slider*/
 .owl-demo .owl-controls,
 .owl-demo .owl-dots {
   display: none !important;
@@ -506,7 +427,6 @@ h6 {
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  /* text-transform: uppercase; */
 }
 .slider-image1 h1 span {
   font-size: 30px;
@@ -517,7 +437,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  /* text-transform: uppercase; */
 }
 .slider-image1 .second-para {
   color: var(--dark-gray);
@@ -532,7 +451,6 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
 }
 .slider-image1 .header-div-1 .btn-1:focus,
 .slider-image1 .header-div-1 .btn-1:hover {
@@ -555,7 +473,6 @@ h6 {
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  /* text-transform: uppercase; */
 }
 .slider-image2 h1 span {
   font-size: 30px;
@@ -566,7 +483,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  /* text-transform: uppercase; */
 }
 .slider-image2 .second-para {
   color: var(--dark-gray);
@@ -581,7 +497,6 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
 }
 .slider-image2 .header-div-1 .btn-1:focus,
 .slider-image2 .header-div-1 .btn-1:hover {
@@ -603,7 +518,6 @@ h6 {
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  /* text-transform: uppercase; */
 }
 .slider-image3 h1 span {
   font-size: 30px;
@@ -614,7 +528,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  /* text-transform: uppercase; */
 }
 .slider-image3 .second-para {
   color: var(--dark-gray);
@@ -629,7 +542,6 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
 }
 .slider-image3 .header-div-1 .btn-1:focus,
 .slider-image3 .header-div-1 .btn-1:hover {
@@ -641,7 +553,6 @@ h6 {
   transition: ease-out 0.4s;
 }
 
-/*header form*/
 .header-div-3 h1 {
   color: var(--dark-gray);
   font-size: 50px;
@@ -649,7 +560,6 @@ h6 {
   letter-spacing: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-  /* text-transform: uppercase; */
 }
 .header-div-3 h1 span {
   font-size: 30px;
@@ -660,7 +570,6 @@ h6 {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 24px;
-  /* text-transform: uppercase; */
 }
 .header-bgimage-3 .second-para {
   color: var(--dark-gray);
@@ -728,7 +637,6 @@ h6 {
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
 }
 .header-div-3 .btn-1:focus,
 .header-div-3 .btn-1:hover {
@@ -744,20 +652,15 @@ h6 {
   padding: 20px 20px 30px 20px;
 }
 
-/*========================================== 5.HEADER END ===========================================*/
-
-/* ============== LAYOUT - IND GRID ======================= */
-
 #industrial-products .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px 32px; /* 24px row-gap, 32px column-gap */
+  gap: 24px 32px;
   justify-items: center;
   text-align: center;
 }
 
 #industrial-products .services-div {
-  /* text-align: left; */
   max-width: 320px;
 }
 
@@ -766,13 +669,9 @@ h6 {
   margin-top: 8px;
 }
 
-/* Optional: center heading */
 .heading-div-1 {
   margin-bottom: 2rem;
 }
-
-/* ======================== ======================== */
-/*========================================== 6.SERVICES START ===========================================*/
 
 .services-div {
   background-color: #fafafa;
@@ -810,8 +709,6 @@ h6 {
 .services-row .col-md-3:nth-child(5) {
   clear: both;
 }
-/*========================================== 6.SERVICES END ===========================================*/
-/*========================================== 7.THREE COLUMN START ===========================================*/
 
 .three-col-div {
   background-color: #f9f9f9;
@@ -855,25 +752,22 @@ h6 {
 .equal-height-row {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px; /* gutter fix if using Bootstrap */
+  margin: -15px;
 }
 .equal-height-col {
   display: flex;
   flex-direction: column;
-  padding: 15px; /* gutter fix */
+  padding: 15px;
 }
 .three-col-div {
-  flex: 1; /* make text box stretch equal */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 .three-col-div .btn-top-space {
-  margin-top: auto; /* push button to bottom */
+  margin-top: auto;
 }
 
-/*========================================== 7.THREE COLUMN END ===========================================*/
-/*========================================== 8.TWO COLUMN START ===========================================*/
-/*features*/
 .features-col h4 a {
   color: var(--dark-gray);
 }
@@ -899,7 +793,6 @@ h6 {
 .content-top-space-2 {
   margin-top: 10px;
 }
-/*two col left and right*/
 .two-left-right-bg .two-left-div {
   padding-bottom: 80px;
   padding-top: 80px;
@@ -926,12 +819,10 @@ h6 {
   width: 50%;
 }
 .two-right-bgimage {
-  background-image: url("../../images/1000x530x2.jpg");
+  background-image: url("../../images/custom/people_standing.webp");
   height: 472px;
   width: 50%;
 }
-/*========================================== 8.TWO COLUMN END ===========================================*/
-/*========================================== 9.COUNTER START ===========================================*/
 
 .counter-bgimage {
   background-image: url("../../images/1920x400.jpg");
@@ -951,7 +842,6 @@ h6 {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
-  /* text-transform: uppercase; */
 }
 .counter-div .col-md-4 {
   padding-left: 10px;
@@ -963,8 +853,6 @@ h6 {
 .counter-div .counter-value {
   margin-bottom: 10px;
 }
-/*========================================== 9.COUNTER END ===========================================*/
-/*========================================== 10.TESTIMONIAL START ===========================================*/
 
 .testimonial-bg {
   background-image: url("../../images/1920x700x2.jpg");
@@ -1009,8 +897,6 @@ h6 {
 .owl-carousel.testimonial .owl-item img {
   width: auto;
 }
-/*========================================== 10.TESTIMONIAL END ===========================================*/
-/*========================================== 11.NEWS START ===========================================*/
 
 .news-ul {
   display: inline;
@@ -1047,7 +933,6 @@ h6 {
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 1px;
-  /* text-transform: uppercase; */
 }
 .news-ul p a {
   color: #777777;
@@ -1092,8 +977,6 @@ h6 {
 .news-row-1 {
   position: relative;
 }
-/*========================================== 11.NEWS END ===========================================*/
-/*========================================== 12.PRICE TABLE START ===========================================*/
 
 .price-line {
   position: relative;
@@ -1211,8 +1094,6 @@ h6 {
   color: var(--dark-gray);
   font-size: 30px;
 }
-/*========================================== 12.PRICE TABLE END ===========================================*/
-/*========================================== 13.CONTACT START ===========================================*/
 
 .form-div-1 label {
   display: none !important;
@@ -1220,36 +1101,26 @@ h6 {
 
 .form-div-1 .error::-webkit-input-placeholder,
 .form-div-1 .error::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-
   color: #ff0000 !important;
 }
 
 .form-div-1 .form-message.error::placeholder,
 .form-div-1 .form-input.error::placeholder {
-  /* WebKit, Blink, Edge */
-
   color: #ff0000 !important;
 }
 
 .form-div-1 .form-message.error:-moz-placeholder,
 .form-div-1 .form-input.error:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-
   color: #ff0000;
   opacity: 1;
 }
 .form-div-1 .form-message.error::-moz-placeholder,
 .form-div-1 .form-input.error::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-
   color: #ff0000;
   opacity: 1;
 }
 .form-div-1 .form-message.error:-ms-input-placeholder,
 .form-div-1 .form-input.error:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-
   color: #ff0000;
 }
 
@@ -1318,8 +1189,6 @@ textarea:focus {
 .contact-top-space {
   margin-top: 30px;
 }
-/*========================================== 13.CONTACT END ===========================================*/
-/*========================================== 14.SUBSCRIBE START ===========================================*/
 
 #mc_embed_signup {
   clear: left;
@@ -1401,8 +1270,6 @@ textarea:focus {
 .strip-row p {
   color: var(--dark-gray);
 }
-/*========================================== 14.SUBSCRIBE END ===========================================*/
-/*========================================== 15.TEAM START ===========================================*/
 
 .content {
   position: relative;
@@ -1459,7 +1326,6 @@ textarea:focus {
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
-  /* text-transform: uppercase; */
 }
 .content-details p {
   color: #fff;
@@ -1483,7 +1349,6 @@ textarea:focus {
   border: 1px solid #dddddd;
   padding: 20px;
 }
-/*CTA*/
 
 .cta-bg {
   background-image: url("../../images/1920x700x1.jpg");
@@ -1516,8 +1381,6 @@ textarea:focus {
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
 }
-/*========================================== 15.TEAM END ===========================================*/
-/*========================================== 16.GALLERY START ===========================================*/
 
 .gallery-space {
   padding-bottom: 30px;
@@ -1528,7 +1391,6 @@ textarea:focus {
   margin-left: 15px;
   margin-right: 15px;
 }
-/* GALLERY HOVER */
 
 .gallery-inner {
   display: block;
@@ -1602,7 +1464,6 @@ textarea:focus {
   position: relative;
   margin-top: 0;
   margin-bottom: 8px;
-  /* text-transform: uppercase; */
   line-height: 25px;
   font-size: 20px;
   font-weight: 400;
@@ -1610,7 +1471,6 @@ textarea:focus {
 .gallery-inner img {
   border-radius: 3px;
 }
-/* Filter controls */
 
 .filter-options li {
   color: var(--light-gray);
@@ -1620,7 +1480,6 @@ textarea:focus {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
-  /* text-transform: capitalize; */
   position: relative;
   padding: 5px 0;
 }
@@ -1649,8 +1508,6 @@ textarea:focus {
 .gallery-row-2 {
   padding-bottom: 30px;
 }
-/*========================================== 16.GALLERY END ===========================================*/
-/*========================================== 17.FOOTER START ===========================================*/
 
 .footer-logo {
   margin-bottom: 15px;
@@ -1692,7 +1549,6 @@ textarea:focus {
   display: block;
   text-align: left !important;
 }
-/*footer form*/
 
 .copyright p {
   letter-spacing: 1px;
@@ -1722,8 +1578,6 @@ textarea:focus {
 .scrolloff {
   pointer-events: none;
 }
-/*========================================== 17.FOOTER END ===========================================*/
-/*========================================== 18.MEDIA QUERIES START ===========================================*/
 @media only screen and (min-width: 250px) and (max-width: 767px) {
   .navbar-nav > li > a {
     font-size: 13px;
@@ -1983,43 +1837,38 @@ textarea:focus {
     padding-right: 15px;
   }
 }
-/* === Global logo styles === */
 .client-row {
   display: flex;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  justify-content: center; /* center logos horizontally */
-  align-items: center; /* center logos vertically */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   color: black;
   margin: 0 -10px;
 }
 
-/* Container div for logos that should shrink to fit content (e.g., Apple) */
 .clients-res-space1 {
-  display: inline-flex; /* shrink-wrap to SVG content */
-  align-items: center; /* vertically center */
-  justify-content: center; /* horizontally center */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
-  width: auto; /* fit SVG width */
+  width: auto;
 }
 
-/* All SVG logos */
 .clients-res-space1 svg,
 .client-row svg {
-  display: block; /* remove inline whitespace */
-  height: 60px; /* consistent height */
-  width: auto; /* maintain aspect ratio */
-  max-width: none; /* ignore container limits */
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: none;
   object-fit: contain;
-  color: black; /* ensures currentColor works if used in SVG */
+  color: black;
 }
 
-/* Standard container divs for logos */
 .client-row > div {
   text-align: center;
   padding: 10px;
 }
 
-/* === Mobile: up to 767px === */
 @media only screen and (max-width: 767px) {
   .client-row > div {
     flex: 0 0 50%;
@@ -2027,7 +1876,6 @@ textarea:focus {
   }
 }
 
-/* === Tablet: 768px to 991px === */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .client-row {
     flex-wrap: wrap;
@@ -2098,7 +1946,6 @@ textarea:focus {
   }
 }
 
-/* === Desktop: 992px and above === */
 @media only screen and (min-width: 992px) {
   .client-row > div {
     flex: 0 0 25%;
@@ -2133,4 +1980,3 @@ textarea:focus {
     top: 88%;
   }
 }
-/*========================================== 18.MEDIA QUERIES END ===========================================*/
