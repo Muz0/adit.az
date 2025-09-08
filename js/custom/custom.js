@@ -1,40 +1,31 @@
-/*========================================== MASTER JAVASCRIPT ===================================================================
-
-	Project     :	STARTUP TEMPLATES
-	Version     :	1.0
-	Last Change : 	20/07/2017
-	Primary Use :   STARTUP TEMPLATES
-
-=================================================================================================================================*/
 $(document).on("ready", function () {
-  "use strict"; //Start of Use Strict
-  var menu_bar = $(".navbar-default");
+  "use strict";
   var menu_li = $(".navbar-nav li a");
   var collapse = $(".navbar-collapse");
-  // var top_nav = $("#top-nav");
-  var top_menu = $(".header-menu-1");
 
-  //MENU-2 SCROLL
-  // if (top_nav.length) {
-  //   var x = top_nav.offset().top;
-  //   if (x > 50) {
-  //     top_nav.fadeIn();
-  //   } else {
-  //     top_nav.fadeOut();
-  //   }
-  //   $(document).on("scroll", function () {
-  //     var y = $(this).scrollTop();
-  //     if (y > 50) {
-  //       top_nav.fadeIn();
-  //     } else {
-  //       top_nav.fadeOut();
-  //     }
-  //   });
-  // }
+  const langLink = document.querySelector(".language-switch");
+  const url = new URL(window.location.href);
+  const parts = url.pathname.split("/").filter(Boolean);
 
-  // fade in menu has been disabled by request
+  const currentLang = parts[0] === "en" ? "en" : "az";
+  langLink.textContent = currentLang === "en" ? "AZ" : "EN";
+  langLink.dataset.lang = currentLang === "en" ? "az" : "en";
 
-  //RESPONSIVE MENU SHOW AND HIDE FUNCTION
+  langLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetLang = this.dataset.lang;
+
+    let pathParts = parts.slice();
+    if (["en", "az"].includes(pathParts[0])) pathParts.shift();
+
+    const newPath =
+      targetLang === "az"
+        ? "/" + pathParts.join("/")
+        : "/" + targetLang + "/" + pathParts.join("/");
+    url.pathname = newPath;
+    window.location.href = url.toString();
+  });
+
   if (menu_li.length) {
     menu_li.on("click", function (event) {
       collapse.slideToggle();
@@ -44,12 +35,10 @@ $(document).on("ready", function () {
     });
   }
 
-  //MENU BAR SMOOTH SCROLLING FUNCTION
   var menu_list = $(".navbar-nav");
   if (menu_list.length) {
     menu_list.on("click", ".pagescroll", function (event) {
       event.stopPropagation();
-      // event.preventDefault(); // need for default link click
       var hash_tag = $(this).attr("href");
       if ($(hash_tag).length) {
         $("html, body").animate(
@@ -63,7 +52,6 @@ $(document).on("ready", function () {
     });
   }
 
-  // Smooth scrolling for .btn links
   $(".btn").on("click", function (event) {
     var hash_tag = $(this).attr("href");
     if (hash_tag && hash_tag.startsWith("#") && $(hash_tag).length) {
@@ -77,7 +65,6 @@ $(document).on("ready", function () {
     }
   });
 
-  //COUNTER
   var counter = $(".count");
   if (counter.length) {
     counter.counterUp({
@@ -86,7 +73,6 @@ $(document).on("ready", function () {
     });
   }
 
-  //GALLERY POPUP
   var gallery = $(".popup-gallery");
   if (gallery.length) {
     $(".popup-gallery").magnificPopup({
@@ -97,7 +83,7 @@ $(document).on("ready", function () {
       gallery: {
         enabled: true,
         navigateByImgClick: true,
-        preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+        preload: [0, 1],
       },
       image: {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
@@ -108,7 +94,6 @@ $(document).on("ready", function () {
     });
   }
 
-  //CONTACT FORM VALIDATION
   if ($(".contact-form-1").length) {
     $(".contact-form-1").each(function () {
       $(this).validate({
@@ -141,5 +126,4 @@ $(document).on("ready", function () {
   }
 
   return false;
-  // End of use strict
 });
