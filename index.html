@@ -181,7 +181,59 @@
         </div>
       </div>
     </section>
-    <div class="section-2-bg section-padding">
+
+    <style>
+      /* --- Scoped only to this official distribution section --- */
+      .section-2-bg.section-padding.svg .client-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+      }
+
+      /* --- Normalize all logos in this section --- */
+      .section-2-bg.section-padding.svg .client-row img,
+      .section-2-bg.section-padding.svg .client-row svg {
+        max-height: 80px;
+        height: auto;
+        width: auto;
+        display: block;
+      }
+
+      /* --- Optional wrapper for SVGs --- */
+      .section-2-bg.section-padding.svg .client-row .clients-res-space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 80px;
+        flex: 0 0 auto;
+      }
+
+      /* --- Responsive tweaks --- */
+      @media (max-width: 768px) {
+        .section-2-bg.section-padding.svg .client-row {
+          gap: 15px;
+        }
+        .section-2-bg.section-padding.svg .client-row img,
+        .section-2-bg.section-padding.svg .client-row svg {
+          max-height: 60px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .section-2-bg.section-padding.svg .client-row {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .section-2-bg.section-padding.svg .client-row img,
+        .section-2-bg.section-padding.svg .client-row svg {
+          max-height: 50px;
+        }
+      }
+    </style>
+    <div class="svg section-2-bg section-padding">
       <div class="container">
         <div class="heading-div-1 text-center">
           <h2>Rəsmi Distribyusiya</h2>
