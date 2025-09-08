@@ -26,6 +26,12 @@
       .section-padding {
         padding-top: 100px;
       }
+
+      @media only screen and (max-width: 767px) {
+        .hide-mobile {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
@@ -98,7 +104,7 @@
               </p>
             </div>
             <br />
-            <div class="contact-div">
+            <div class="contact-div hide-mobile">
               <ul class="content-ul contact-address contact-address-space">
                 <li><img src="images/32x32x5.png" alt="email icon" /></li>
                 <li>
