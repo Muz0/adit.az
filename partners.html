@@ -35,16 +35,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #e2e8f0;
+        /* background-color: #e2e8f0; */
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
           0 2px 4px -1px rgba(0, 0, 0, 0.06);
         overflow: hidden;
+        height: 120px; /* same height for all items */
+        margin-bottom: 15px;
       }
+
       .carousel-item img {
-        width: 100%;
+        max-width: 150px; /* set consistent logo width cap */
+        max-height: 120px; /* set consistent logo height cap */
+        width: auto; /* keep proportions */
         height: auto;
-        border-radius: 0.5rem;
+        object-fit: contain; /* prevents distortion */
       }
 
       .owl-carousel.owl-theme {
@@ -402,31 +407,31 @@
       <div class="owl-carousel owl-theme">
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=World+Telecom"
+            src="images/items/wt-removebg-preview.png"
             alt="World Telecom Logo"
           />
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=Smart+Electronics"
+            src="images/items/smart_electronics-removebg-preview.png"
             alt="Smart Electronics Logo"
           />
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=Umico"
+            src="images/items/umicoaz-removebg-preview.png"
             alt="Umico Logo"
           />
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=My+Shops"
+            src="images/items/my-shop-removebg-preview.png"
             alt="My Shops Logo"
           />
         </div>
       </div>
     </div>
-
+    <br />
     <div class="footer-section section-padding">
       <div class="container">
         <div class="row">
