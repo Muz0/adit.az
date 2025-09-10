@@ -30,7 +30,38 @@
       href="css/vendor/font-awesome/css/font-awesome.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/custom/style.css" />
-    <style></style>
+    <style>
+      .carousel-item {
+        display: flex;
+        flex-direction: column; /* stack logo above text */
+        align-items: center;
+        justify-content: center;
+        /* background-color: #e2e8f0; */
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        height: 150px; /* more room for text under logo */
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      .carousel-item img {
+        max-width: 150px;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .carousel-item p {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        color: #2d3748; /* dark gray */
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
     <header>
@@ -305,30 +336,47 @@
 
       <div class="owl-carousel owl-theme">
         <div class="item carousel-item">
-          <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=World+Telecom"
-            alt="World Telecom Logo"
-          />
+          <img src="images/items/s25.webp" alt="Samsung Galaxy S25 Ultra" />
+          <p>Samsung Galaxy S25 Ultra</p>
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=Smart+Electronics"
-            alt="Smart Electronics Logo"
+            src="images/items/fridge.png"
+            alt="Refrigerator Samsung RB31FERNDS9/WR"
           />
+          <p>Refrigerator Samsung RB31FERNDS9/WR</p>
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=Umico"
-            alt="Umico Logo"
+            src="images/items/mwoven.png"
+            alt="Microwave Samsung MG23K3515AS/BW"
           />
+          <p>Microwave Samsung MG23K3515AS/BW</p>
         </div>
         <div class="item carousel-item">
           <img
-            src="https://placehold.co/200x150/cbd5e0/4a5568?text=My+Shops"
-            alt="My Shops Logo"
+            src="images/items/oven.png"
+            alt="Built-in oven Samsung NV68A1110BB/WT"
           />
+          <p>Built-in oven Samsung NV68A1110BB/WT</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/wmachine.png"
+            alt="Washing Machine Samsung NV68A1110BB/WT"
+          />
+          <p>Washing Machine Samsung NV68A1110BB/WT</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/vcleaner.png"
+            alt="Vacuum Cleaner Samsung VCC885HH3P/XEV"
+          />
+          <p>Vacuum Cleaner Samsung VCC885HH3P/XEV</p>
         </div>
       </div>
+
+      <br />
     </div>
 
     <section class="section-padding bgimage-property" id="services">

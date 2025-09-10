@@ -1980,3 +1980,19 @@ textarea:focus {
     top: 88%;
   }
 }
+@media (min-width: 768px) {
+  #fix-float .col-sm-1,
+  #fix-float .col-sm-2,
+  #fix-float .col-sm-3,
+  #fix-float .col-sm-4,
+  #fix-float .col-sm-5,
+  #fix-float .col-sm-6,
+  #fix-float .col-sm-7,
+  #fix-float .col-sm-8,
+  #fix-float .col-sm-9,
+  #fix-float .col-sm-10,
+  #fix-float .col-sm-11,
+  #fix-float .col-sm-12 {
+    float: none !important; /* override legacy float */
+  }
+}
