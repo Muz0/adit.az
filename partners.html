@@ -279,18 +279,18 @@
           <div class="services-div">
             <h5><a href="#">Çatdırılma və Logistika</a></h5>
             <p class="content-top-space1">
-              Sifarişlər tərəfdaş şirkətin (Vuqar) ofisinə və ya anbarına
-              birbaşa çatdırılır. İstehsalçı Zəmanət zəmanəti daxilində olan
-              qüsurlu məhsullar üçün götürmə və təmir xidmətləri təqdim olunur.
+              Sifarişlər tərəfdaş şirkətin ofisinə və ya anbarına birbaşa
+              çatdırılır. İstehsalçı Zəmanət zəmanəti daxilində olan qüsurlu
+              məhsullar üçün götürmə və təmir xidmətləri təqdim olunur.
             </p>
           </div>
 
           <div class="services-div">
             <h5><a href="#">Məhsul Zəmanəti</a></h5>
             <p class="content-top-space1">
-              Bütün məhsullar rəsmi istehsalçı zəmanəti (Vuqar) ilə təmin
-              olunur. Qüsurlu məhsullar zəmanət şərtlərinə uyğun olaraq təmir
-              edilir və ya yenisi ilə əvəzlənir.
+              Bütün məhsullar rəsmi istehsalçı zəmanəti ilə təmin olunur.
+              Qüsurlu məhsullar zəmanət şərtlərinə uyğun olaraq təmir edilir və
+              ya yenisi ilə əvəzlənir.
             </p>
           </div>
 
@@ -346,6 +346,40 @@
       </div>
     </section>
 
+    <style>
+      #industrial-products .services-row {
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 30px; */
+        margin-bottom: 30px;
+      }
+
+      #industrial-products .services-row:not(.services-row-center) {
+        justify-content: space-between; /* spreads 3 items */
+      }
+
+      #industrial-products .services-row-center {
+        justify-content: center; /* centers 2 items */
+        gap: 60px; /* extra space between the 2 items */
+      }
+
+      #industrial-products .services-div {
+        flex: 1 1 30%;
+        max-width: 300px; /* optional, controls max width */
+      }
+
+      /* mobile: stack items */
+      @media (max-width: 767px) {
+        #industrial-products .services-row {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #industrial-products .services-div {
+          max-width: 100%;
+        }
+      }
+    </style>
     <section class="section-padding bgimage-property" id="industrial-products">
       <div class="container">
         <div class="heading-div-1 text-center">
@@ -353,7 +387,8 @@
           <div class="underline"></div>
         </div>
 
-        <div class="services-grid">
+        <!-- First row: 3 items -->
+        <div class="services-row">
           <div class="services-div">
             <h5>
               <a href="#">Elektronika Mağazaları və Pərakəndə Şəbəkələr</a>
@@ -376,7 +411,10 @@
               Korporativ ehtiyaclara uyğun texnoloji həllər və təchizat xidməti.
             </p>
           </div>
+        </div>
 
+        <!-- Second row: 2 items centered -->
+        <div class="services-row services-row-center">
           <div class="services-div">
             <h5><a href="#">Onlayn Satış Platformaları</a></h5>
             <p class="content-top-space1">
@@ -418,10 +456,7 @@
           />
         </div>
         <div class="item carousel-item">
-          <img
-            src="images/items/umicoaz-removebg-preview.png"
-            alt="Umico Logo"
-          />
+          <img src="images/items/birmarket.png" alt="Umico Logo" />
         </div>
         <div class="item carousel-item">
           <img

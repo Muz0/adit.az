@@ -323,7 +323,8 @@ h6 {
 }
 
 .header-bgimage-1 {
-  background-image: url("../../images/custom/rename_lights.jpg");
+  /* background-image: url("../../images/custom/rename_lights.jpg"); */
+  background-image: url("../../images/custom/dark_bg.webp");
 
   background-size: cover;
   background-position: center;
