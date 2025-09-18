@@ -139,72 +139,75 @@
           <!-- <br /> -->
           <div class="col-sm-6">
             <div class="form-col-1 no-padding">
-              <form
-                class="contact-form-1"
-                method="POST"
-                novalidate="novalidate"
-              >
+              <form id="contact-form" class="contact-form-1" novalidate>
                 <div class="form-div-1">
                   <input
                     class="form-input"
                     type="text"
+                    id="name"
                     name="name"
-                    value=""
-                    placeholder="Ad"
-                    required=""
+                    placeholder="First Name"
+                    required
                     autocomplete="off"
                   />
                 </div>
+
                 <div class="form-div-1">
                   <input
                     class="form-input"
                     type="text"
+                    id="surname"
                     name="surname"
-                    value=""
-                    placeholder="Soyad"
-                    required=""
+                    placeholder="Last Name"
+                    required
                     autocomplete="off"
                   />
                 </div>
+
                 <div class="form-div-1">
                   <input
                     class="form-input"
                     type="email"
+                    id="email"
                     name="email"
-                    value=""
-                    placeholder="E-poçt *"
-                    required=""
+                    placeholder="Email *"
+                    required
                     autocomplete="off"
                   />
                 </div>
+
                 <div class="form-div-1">
                   <input
                     class="form-input"
                     type="text"
+                    id="subject"
                     name="subject"
-                    value=""
-                    placeholder="Mövzu"
-                    required=""
+                    placeholder="Subject"
+                    required
                     autocomplete="off"
                   />
                 </div>
+
                 <div class="form-div-1">
                   <textarea
                     class="form-message"
+                    id="message"
                     name="message"
                     cols="40"
                     rows="3"
-                    placeholder="Mesaj"
-                    required=""
+                    placeholder="Message"
+                    required
                     autocomplete="off"
                   ></textarea>
                 </div>
+
                 <div class="button form-btn text-left">
                   <button type="submit" class="btn btn-1 submit">Göndər</button>
                 </div>
+
                 <div class="messageDiv">
-                  <span class="sucessMessage"> </span>
-                  <span class="failMessage"> </span>
+                  <span class="successMessage"></span>
+                  <span class="failMessage"></span>
                 </div>
               </form>
             </div>
@@ -276,5 +279,33 @@
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/custom/custom.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("4fuPCjKZtOEQNxMtR"); // replace with your EmailJS user ID
+      })();
+
+      const form = document.getElementById("contact-form");
+      const successMsg = document.querySelector(".successMessage");
+      const failMsg = document.querySelector(".failMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_rb1gxpp", "template_154teyf", this).then(
+          () => {
+            successMsg.textContent = "Müraciətiniz uğurla qeydə alındı!";
+            failMsg.textContent = "";
+            form.reset();
+          },
+          (error) => {
+            failMsg.textContent =
+              "Bir problem yaşandı! Telefon ilə əlaqə saxlayın!";
+            successMsg.textContent = "";
+            console.error("EmailJS error:", error);
+          }
+        );
+      });
+    </script>
   </body>
 </html>

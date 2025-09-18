@@ -132,16 +132,12 @@
           <br />
           <div class="col-sm-6">
             <div class="form-col-1 no-padding">
-              <form
-                class="contact-form-1"
-                action="send.php"
-                method="POST"
-                novalidate="novalidate"
-              >
+              <form id="contact-form" class="contact-form-1" novalidate>
                 <div class="form-div-1">
                   <input
                     class="form-input"
                     type="text"
+                    id="name"
                     name="name"
                     placeholder="First Name"
                     required
@@ -153,6 +149,7 @@
                   <input
                     class="form-input"
                     type="text"
+                    id="surname"
                     name="surname"
                     placeholder="Last Name"
                     required
@@ -164,6 +161,7 @@
                   <input
                     class="form-input"
                     type="email"
+                    id="email"
                     name="email"
                     placeholder="Email *"
                     required
@@ -175,6 +173,7 @@
                   <input
                     class="form-input"
                     type="text"
+                    id="subject"
                     name="subject"
                     placeholder="Subject"
                     required
@@ -185,6 +184,7 @@
                 <div class="form-div-1">
                   <textarea
                     class="form-message"
+                    id="message"
                     name="message"
                     cols="40"
                     rows="3"
@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="messageDiv">
-                  <span class="sucessMessage"></span>
+                  <span class="successMessage"></span>
                   <span class="failMessage"></span>
                 </div>
               </form>
@@ -272,5 +272,32 @@
     <script type="text/javascript" src="../js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="../js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/custom/custom.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("4fuPCjKZtOEQNxMtR"); // replace with your EmailJS user ID
+      })();
+
+      const form = document.getElementById("contact-form");
+      const successMsg = document.querySelector(".successMessage");
+      const failMsg = document.querySelector(".failMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm("service_rb1gxpp", "template_154teyf", this).then(
+          () => {
+            successMsg.textContent = "Message sent successfully!";
+            failMsg.textContent = "";
+            form.reset();
+          },
+          (error) => {
+            failMsg.textContent = "Failed to send message. Try again!";
+            successMsg.textContent = "";
+            console.error("EmailJS error:", error);
+          }
+        );
+      });
+    </script>
   </body>
 </html>
