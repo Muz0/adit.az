@@ -75,6 +75,25 @@
         }
       }
     </style>
+    <style>
+      .row.text-center {
+        display: flex;
+        flex-wrap: wrap; /* responsive wrapping */
+        align-items: stretch; /* make all children same height */
+      }
+
+      .services-space {
+        display: flex; /* allow inner div to stretch */
+      }
+
+      .services-div {
+        flex: 1; /* fill parent height */
+        display: flex; /* make this a flex container */
+        flex-direction: column;
+        justify-content: center; /* vertical centering */
+        text-align: center; /* horizontal centering */
+      }
+    </style>
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
     <header>
