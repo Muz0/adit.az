@@ -27,16 +27,16 @@
 /* ======== Product Image ======== */
 /* ======== Product Image (responsive scaling, no overflow) ======== */
 #itemModal .modal-img {
-  width: clamp(
-    250px,
-    70%,
-    520px
-  ); /* min 250px, ideal 70% of modal, max 520px */
+  max-width: 100%;
+  width: clamp(250px, 70%, 520px);
   height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto 16px auto;
   border-radius: 10px;
+  /* Prevent overflow at all times */
+  max-height: 70vh; /* never taller than 70% of screen height */
+  box-sizing: border-box;
 }
 
 /* ======== Market List ======== */
