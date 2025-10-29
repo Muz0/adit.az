@@ -41,14 +41,33 @@
         flex-direction: column; /* stack logo above text */
         align-items: center;
         justify-content: center;
-        /* background-color: #e2e8f0; */
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
           0 2px 4px -1px rgba(0, 0, 0, 0.06);
         overflow: hidden;
         height: 250px;
         padding: 10px;
+        margin-top: 15px;
         margin-bottom: 15px;
+        background-color: #ffffff; /* ensure consistent base */
+        transition: all 0.25s ease;
+      }
+
+      /* === Hover effect === */
+      .carousel-item:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15),
+          0 4px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Optional: subtle glow border for better touch feedback */
+      .carousel-item:hover::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        pointer-events: none;
       }
 
       .carousel-item img {
@@ -246,7 +265,6 @@
               <img
                 src="images/custom/handshake.webp"
                 alt="750x500x1"
-                loading="lazy"
                 class="img-responsive"
               />
             </div>
@@ -267,7 +285,6 @@
               <img
                 src="images/custom/operator.webp"
                 alt="750x500x2"
-                loading="lazy"
                 class="img-responsive"
               />
             </div>
@@ -355,30 +372,22 @@
         <div class="platforms-row">
           <!-- Samsung -->
           <div id="platform-samsung" class="platform">
-            <img
-              src="images/brands/samsung-8.svg"
-              alt="Samsung"
-              loading="lazy"
-            />
+            <img src="images/brands/samsung-8.svg" alt="Samsung" />
           </div>
 
           <!-- Apple (example svg) -->
           <div id="platform-apple" class="platform">
-            <img
-              src="images/brands/apple-black-logo-svgrepo-com.svg"
-              alt=""
-              loading="lazy"
-            />
+            <img src="images/brands/apple-black-logo-svgrepo-com.svg" alt="" />
           </div>
 
           <!-- Huawei -->
           <div id="platform-phillips" class="platform">
-            <img src="images/brands/philips.jpg" alt="" loading="lazy" />
+            <img src="images/brands/philips.jpg" alt="" />
           </div>
 
           <!-- Xiaomi -->
           <div id="platform-huawei" class="platform">
-            <img src="images/brands/xiaomi-4.svg" alt="" loading="lazy" />
+            <img src="images/brands/xiaomi-4.svg" alt="" />
           </div>
         </div>
       </div>
@@ -396,32 +405,32 @@
         <div class="row text-center">
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Smartfonlar</a></h5>
+              <h5><a>Smartfonlar</a></h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Mobil Aksesuarları</a></h5>
+              <h5><a>Mobil Aksesuarları</a></h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Planşet və Noutbuklar</a></h5>
+              <h5><a>Planşet və Noutbuklar</a></h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Smart Saatlar</a></h5>
+              <h5><a>Smart Saatlar</a></h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Qulaqlıqlar</a></h5>
+              <h5><a>Qulaqlıqlar</a></h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-4 services-space">
             <div class="services-div">
-              <h5><a href="#">Ev Üçün Elektronika</a></h5>
+              <h5><a>Ev Üçün Elektronika</a></h5>
             </div>
           </div>
         </div>
@@ -437,7 +446,7 @@
 
         <div class="services-grid">
           <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Televizorlar (Business TV)</a></h5>
+            <h5><a>Sənaye Tipli Televizorlar (Business TV)</a></h5>
             <p class="content-top-space1">
               Otellər, ofislər və sərgi mərkəzləri üçün nəzərdə tutulmuş,
               uzunmüddətli işləmə qabiliyyətinə malik professional ekranlar.
@@ -445,7 +454,7 @@
           </div>
 
           <div class="services-div">
-            <h5><a href="#">Sənaye Soyuducuları</a></h5>
+            <h5><a>Sənaye Soyuducuları</a></h5>
             <p class="content-top-space1">
               Mağazalar, restoranlar və digər kommersiya obyektləri üçün nəzərdə
               tutulmuş, yüksək tutumlu və davamlı soyuducu modelləri.
@@ -453,7 +462,7 @@
           </div>
 
           <div class="services-div">
-            <h5><a href="#">Kondisionerlər (Kommersiya Tipli)</a></h5>
+            <h5><a>Kondisionerlər (Kommersiya Tipli)</a></h5>
             <p class="content-top-space1">
               Böyük məkanlar üçün güclü soyutma və havalandırma sistemləri, VRF
               və split sistemlər.
@@ -461,7 +470,7 @@
           </div>
 
           <div class="services-div">
-            <h5><a href="#">Sənaye Tipli Tozsoranlar</a></h5>
+            <h5><a>Sənaye Tipli Tozsoranlar</a></h5>
             <p class="content-top-space1">
               Geniş sahələrin və ofislərin təmizlənməsi üçün nəzərdə tutulmuş
               yüksək gücə və filtrasiya qabiliyyətinə malik tozsoran modelləri.
@@ -469,7 +478,7 @@
           </div>
 
           <div class="services-div">
-            <h5><a href="#">Planşetlər (Biznes Seriyası)</a></h5>
+            <h5><a>Planşetlər (Biznes Seriyası)</a></h5>
             <p class="content-top-space1">
               Logistik, anbar, satış və servis sahələri üçün dayanıqlı,
               uzunömürlü, təhlükəsiz və idarəetməsi asan olan modellər.
@@ -477,7 +486,7 @@
           </div>
 
           <div class="services-div">
-            <h5><a href="#">Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
+            <h5><a>Mobil Telefonlar (Sənaye və Field Use üçün)</a></h5>
             <p class="content-top-space1">
               Suya, toza və zərbəyə davamlı, xüsusi şəbəkə və təhlükəsizlik
               dəstəyi ilə təchiz olunmuş peşəkar modellər.
@@ -509,7 +518,6 @@
             <img
               src="images/custom/girls_handshale.webp"
               alt="555x590"
-              loading="lazy"
               class="img-responsive"
             />
           </div>
@@ -521,7 +529,7 @@
                     <img src="images/quality.png" alt="Keyfiyyət" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">Keyfiyyət</a></h4>
+                    <h4><a>Keyfiyyət</a></h4>
                     <p class="content-top-space-2">
                       Yüksək performanslı və tam yoxlanılmış məhsullar təqdim
                       edirik; bütün təchizatımız beynəlxalq sənaye
@@ -536,7 +544,7 @@
                     <img src="images/trust.png" alt="Etibarlılıq" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">Etibarlılıq</a></h4>
+                    <h4><a>Etibarlılıq</a></h4>
                     <p class="content-top-space-2">
                       Tərəfdaşlıq münasibətlərini şəffaflıq, dürüstlük və
                       davamlı xidmət prinsipləri ilə qurur, uzunmüddətli
@@ -551,7 +559,7 @@
                     <img src="images/stability.png" alt="Sabitlik" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">Sabitlik</a></h4>
+                    <h4><a>Sabitlik</a></h4>
                     <p class="content-top-space-2">
                       Hər bir sifarişi vaxtında və ideal vəziyyətdə çatdırmaqla
                       tərəfdaşlarımızın fəaliyyətinə fasiləsiz dəstək
@@ -566,7 +574,7 @@
                     <img src="images/innovation.png" alt="İnnovasiya" />
                   </div>
                   <div class="list-div-body">
-                    <h4><a href="#">İnnovasiya</a></h4>
+                    <h4><a>İnnovasiya</a></h4>
                     <p class="content-top-space-2">
                       Bazardakı yenilikləri yaxından izləyir, məhsul və
                       xidmətlərimizi daim təkmilləşdirərək müştərilərimizə
