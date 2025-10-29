@@ -63,61 +63,108 @@
   transition: all 0.25s ease;
 }
 
-/* === Modernized "Where to Buy" (primary) button === */
+/* === Unified Modern Button Base === */
+/* === "Where to Buy" (Blue Button – Premium Modern Style) === */
 #buyButton {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: #fff;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2c2862 0%, #2c2862 50%, #2c2862 100%);
   border: none;
-  padding: 12px 28px;
-  border-radius: 9999px; /* pill shape */
+  padding: 12px 32px;
+  border-radius: 9999px;
   font-weight: 600;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25),
+    0 6px 18px rgba(37, 99, 235, 0.25);
+  isolation: isolate;
+}
+
+/* Light sweep animation layer */
+#buyButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    transparent 80%
+  );
+  transform: skewX(-20deg);
+  transition: all 0.6s ease;
+}
+
+#buyButton:hover::before {
+  left: 125%;
 }
 
 #buyButton:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35),
+    0 8px 20px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
 }
 
 #buyButton:active {
   transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-/* === Modernized "Geri" (secondary) button === */
+/* Subtle light glow effect */
+#buyButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.3),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+#buyButton:hover::after {
+  opacity: 0.2;
+}
+
+/* === "Geri" (Secondary) === */
 #backButton {
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
+  background: rgba(241, 245, 249, 0.9);
   color: #1e293b;
-  padding: 12px 28px;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 #backButton:hover {
-  background: #e2e8f0;
-  border-color: #94a3b8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: rgba(226, 232, 240, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 #backButton:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: rgba(210, 219, 235, 0.95);
 }
 
-/* === Consistent mobile-friendly full width === */
+/* === Mobile & Center Alignment === */
+#itemModal .modal-body {
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   #buyButton,
   #backButton {
     width: 100%;
     padding: 14px 0;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
