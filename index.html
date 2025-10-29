@@ -33,6 +33,7 @@
       href="css/vendor/font-awesome/css/font-awesome.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/custom/style.css" />
+    <link rel="stylesheet" href="css/custom/modal.css" />
     <style>
       .carousel-item {
         display: flex;
@@ -44,14 +45,14 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
           0 2px 4px -1px rgba(0, 0, 0, 0.06);
         overflow: hidden;
-        height: 150px; /* more room for text under logo */
+        height: 250px;
         padding: 10px;
         margin-bottom: 15px;
       }
 
       .carousel-item img {
         max-width: 150px;
-        max-height: 80px;
+        max-height: 150px;
         width: auto;
         height: auto;
         object-fit: contain;
@@ -114,7 +115,8 @@
                     <a href="./contact.html" class="pagescroll">Əlaqə</a>
                   </li>
                   <li class="menu">
-                    <a href="#" class="pagescroll language-switch">--</a>
+                    <a href="en/" class="pagescroll language-switch">EN</a>
+                    <!-- <a href="./en/">EN</a> -->
                   </li>
                 </ul>
               </div>
@@ -163,6 +165,74 @@
       </div>
     </section>
 
+    <br />
+
+    <div class="container mx-auto p-4 md:p-8">
+      <div class="text-center my-8">
+        <h2 class="text-3xl font-bold text-gray-800">
+          Ən Çox Satılanlar (Bütün Dövrlər)
+        </h2>
+        <div
+          class="underline mx-auto w-16 h-1 bg-gray-500 mt-2 rounded-full"
+        ></div>
+      </div>
+
+      <br />
+
+      <div class="owl-carousel owl-theme">
+        <div class="item carousel-item">
+          <img
+            src="images/items/s25.webp"
+            alt="Samsung Galaxy S25 Ultra"
+            loading="lazy"
+          />
+          <p>Samsung Galaxy S25 Ultra</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/fridge.png"
+            alt="Refrigerator Samsung RB31FERNDS9/WR"
+            loading="lazy"
+          />
+          <p>Refrigerator Samsung RB31FERNDS9/WR</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/mwoven.png"
+            alt="Microwave Samsung MG23K3515AS/BW"
+            loading="lazy"
+          />
+          <p>Microwave Samsung MG23K3515AS/BW</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/oven.png"
+            alt="Built-in oven Samsung NV68A1110BB/WT"
+            loading="lazy"
+          />
+          <p>Built-in oven Samsung NV68A1110BB/WT</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/wmachine.png"
+            alt="Washing Machine Samsung NV68A1110BB/WT"
+            loading="lazy"
+          />
+          <p>Washing Machine Samsung NV68A1110BB/WT</p>
+        </div>
+        <div class="item carousel-item">
+          <img
+            src="images/items/vcleaner.png"
+            alt="Vacuum Cleaner Samsung VCC885HH3P/XEV"
+            loading="lazy"
+          />
+          <p>Vacuum Cleaner Samsung VCC885HH3P/XEV</p>
+        </div>
+      </div>
+
+      <br />
+    </div>
+
     <section class="section-padding section-2-bg">
       <div class="container">
         <div class="heading-div-1 text-center">
@@ -175,6 +245,7 @@
               <img
                 src="images/custom/handshake.webp"
                 alt="750x500x1"
+                loading="lazy"
                 class="img-responsive"
               />
             </div>
@@ -195,6 +266,7 @@
               <img
                 src="images/custom/operator.webp"
                 alt="750x500x2"
+                loading="lazy"
                 class="img-responsive"
               />
             </div>
@@ -282,85 +354,36 @@
         <div class="platforms-row">
           <!-- Samsung -->
           <div id="platform-samsung" class="platform">
-            <img src="images/brands/samsung-8.svg" alt="Samsung" />
+            <img
+              src="images/brands/samsung-8.svg"
+              alt="Samsung"
+              loading="lazy"
+            />
           </div>
 
           <!-- Apple (example svg) -->
           <div id="platform-apple" class="platform">
-            <img src="images/brands/apple-black-logo-svgrepo-com.svg" alt="" />
+            <img
+              src="images/brands/apple-black-logo-svgrepo-com.svg"
+              alt=""
+              loading="lazy"
+            />
           </div>
 
           <!-- Huawei -->
           <div id="platform-phillips" class="platform">
-            <img src="images/brands/philips.jpg" alt="" />
+            <img src="images/brands/philips.jpg" alt="" loading="lazy" />
           </div>
 
           <!-- Xiaomi -->
           <div id="platform-huawei" class="platform">
-            <img src="images/brands/xiaomi-4.svg" alt="" />
+            <img src="images/brands/xiaomi-4.svg" alt="" loading="lazy" />
           </div>
         </div>
       </div>
     </div>
 
     <br />
-
-    <div class="container mx-auto p-4 md:p-8">
-      <div class="text-center my-8">
-        <h2 class="text-3xl font-bold text-gray-800">
-          Ən Çox Satılanlar (Bütün Dövrlər)
-        </h2>
-        <div
-          class="underline mx-auto w-16 h-1 bg-gray-500 mt-2 rounded-full"
-        ></div>
-      </div>
-
-      <br />
-
-      <div class="owl-carousel owl-theme">
-        <div class="item carousel-item">
-          <img src="images/items/s25.webp" alt="Samsung Galaxy S25 Ultra" />
-          <p>Samsung Galaxy S25 Ultra</p>
-        </div>
-        <div class="item carousel-item">
-          <img
-            src="images/items/fridge.png"
-            alt="Refrigerator Samsung RB31FERNDS9/WR"
-          />
-          <p>Refrigerator Samsung RB31FERNDS9/WR</p>
-        </div>
-        <div class="item carousel-item">
-          <img
-            src="images/items/mwoven.png"
-            alt="Microwave Samsung MG23K3515AS/BW"
-          />
-          <p>Microwave Samsung MG23K3515AS/BW</p>
-        </div>
-        <div class="item carousel-item">
-          <img
-            src="images/items/oven.png"
-            alt="Built-in oven Samsung NV68A1110BB/WT"
-          />
-          <p>Built-in oven Samsung NV68A1110BB/WT</p>
-        </div>
-        <div class="item carousel-item">
-          <img
-            src="images/items/wmachine.png"
-            alt="Washing Machine Samsung NV68A1110BB/WT"
-          />
-          <p>Washing Machine Samsung NV68A1110BB/WT</p>
-        </div>
-        <div class="item carousel-item">
-          <img
-            src="images/items/vcleaner.png"
-            alt="Vacuum Cleaner Samsung VCC885HH3P/XEV"
-          />
-          <p>Vacuum Cleaner Samsung VCC885HH3P/XEV</p>
-        </div>
-      </div>
-
-      <br />
-    </div>
 
     <section class="bgimage-property" id="services">
       <div class="container">
@@ -485,6 +508,7 @@
             <img
               src="images/custom/girls_handshale.webp"
               alt="555x590"
+              loading="lazy"
               class="img-responsive"
             />
           </div>
@@ -616,33 +640,299 @@
         <p>2025 &copy; All Rights Reserved</p>
       </div>
     </footer>
-    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+
+    <style>
+      #marketList {
+        display: none;
+        transition: opacity 0.25s ease;
+      }
+
+      #marketList.active {
+        display: block;
+        opacity: 1;
+      }
+    </style>
+
+    <div
+      class="modal fade"
+      id="itemModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="itemModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Bağla"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="itemModalLabel">Məhsul</h4>
+          </div>
+
+          <div class="modal-body text-center">
+            <!-- Product content -->
+            <div id="productContent">
+              <img id="itemModalImg" class="modal-img" src="" alt="" />
+              <p
+                id="itemModalDesc"
+                class="content-top-space"
+                style="margin-top: 12px"
+              ></p>
+              <button
+                id="buyButton"
+                class="btn btn-primary"
+                style="
+                  margin-top: 15px;
+                  background-color: #2563eb;
+                  border-color: #2563eb;
+                "
+              >
+                Haradan Almaq Olar
+              </button>
+            </div>
+
+            <!-- Partner list content (hidden by default) -->
+            <!-- Partner list content (no carousel) -->
+            <style>
+              /* === Partner grid layout === */
+              .partner-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 20px;
+                justify-items: center;
+                align-items: center;
+                margin-top: 25px;
+              }
+
+              .partner-grid img {
+                max-width: 100px;
+                max-height: 70px;
+                object-fit: contain;
+                padding: 8px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+              }
+
+              .partner-grid img:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+              }
+
+              /* Mobile adjustments */
+              @media (max-width: 480px) {
+                .partner-grid {
+                  gap: 12px;
+                }
+
+                .partner-grid img {
+                  max-width: 80px;
+                  max-height: 55px;
+                  padding: 6px;
+                }
+              }
+            </style>
+            <style>
+              /* ===== Horizontal uniform grid ===== */
+              .partner-grid-horizontal {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 25px;
+              }
+
+              /* Each logo "pad" */
+              .partner-item {
+                flex: 0 1 140px; /* all boxes same width */
+                height: 100px; /* same height for all pads */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+              }
+
+              .partner-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+              }
+
+              .partner-item img {
+                max-width: 80%;
+                max-height: 60%;
+                object-fit: contain;
+              }
+
+              /* ===== Responsive tweaks ===== */
+              @media (max-width: 992px) {
+                .partner-item {
+                  flex: 0 1 120px;
+                  height: 90px;
+                }
+              }
+
+              @media (max-width: 600px) {
+                .partner-item {
+                  flex: 0 1 100px;
+                  height: 80px;
+                }
+              }
+
+              @media (max-width: 400px) {
+                .partner-item {
+                  flex: 0 1 80px;
+                  height: 70px;
+                }
+              }
+            </style>
+            <!-- Partner list content (no carousel, uniform grid) -->
+            <div id="marketList" style="display: none">
+              <h4 class="text-center" style="margin-bottom: 10px">
+                Əməkdaşlıq Tərəfdaşlarımız
+              </h4>
+              <div
+                class="underline mx-auto w-16 h-1 bg-gray-500 mt-2 rounded-full"
+              ></div>
+
+              <div class="partner-grid-horizontal">
+                <div class="partner-item">
+                  <img
+                    src="images/items/wt-removebg-preview.png"
+                    alt="World Telecom Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/smart_electronics-removebg-preview.png"
+                    alt="Smart Electronics Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img src="images/items/birmarket.png" alt="Umico Logo" />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/my-shop-removebg-preview.png"
+                    alt="My Shops Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/carayon-partner.jpeg"
+                    alt="Carayon-partner Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/mobilphone-partner.png"
+                    alt="Mobilphone-partner Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/star-partner.png"
+                    alt="Star-partner Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/digital-home.svg"
+                    alt="Digital-home Logo"
+                  />
+                </div>
+                <div class="partner-item">
+                  <img
+                    src="images/items/st-telecom.png"
+                    alt="ST-Telecom Logo"
+                  />
+                </div>
+              </div>
+
+              <button
+                id="backButton"
+                class="btn btn-default"
+                style="margin-top: 15px"
+              >
+                Geri
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/custom/custom.js"></script>
+    <!-- ✅ Load these once and in this exact order -->
+
+    <!-- jQuery (only once) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS (only once, after jQuery) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel JS (only once) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 20,
-          nav: true,
-          dots: false,
-          autoplay: true,
-          autoplayTimeout: 2000,
-          autoplayHoverPause: true,
-          smartSpeed: 800,
-          responsive: {
-            0: {
-              items: 1,
+      $(function () {
+        const $mainCarousel = $(".owl-carousel:not(.partners-carousel)");
+
+        // Product carousel (kept for main list)
+        if ($mainCarousel.length) {
+          $mainCarousel.owlCarousel({
+            loop: true,
+            margin: 20,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            smartSpeed: 800,
+            responsive: {
+              0: { items: 1 },
+              480: { items: 2 },
+              768: { items: 3 },
+              1000: { items: 4 },
             },
-            600: {
-              items: 2,
-            },
-            1000: {
-              items: 4,
-            },
-          },
+          });
+
+          // Modal open
+          $mainCarousel.on("click", ".carousel-item", function () {
+            const $card = $(this);
+            const title = $.trim($card.find("p").text());
+            const $img = $card.find("img");
+            const src = $img.attr("src");
+            const alt = $img.attr("alt") || title;
+            const desc = $card.data("desc") || alt;
+
+            $("#itemModalLabel").text(title || "Məhsul");
+            $("#itemModalImg").attr({ src: src, alt: alt });
+            $("#itemModalDesc").text(desc);
+            $("#productContent").show();
+            $("#marketList").hide();
+            $("#itemModal").modal("show");
+          });
+        }
+
+        // Switch between product view and partner grid
+        $("#buyButton").on("click", function () {
+          $("#productContent").fadeOut(200, function () {
+            $("#marketList").fadeIn(300);
+          });
+        });
+
+        $("#backButton").on("click", function () {
+          $("#marketList").fadeOut(200, function () {
+            $("#productContent").fadeIn(300);
+          });
         });
       });
     </script>
