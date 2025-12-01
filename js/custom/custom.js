@@ -4,27 +4,29 @@ $(document).on("ready", function () {
   var collapse = $(".navbar-collapse");
 
   const langLink = document.querySelector(".language-switch");
-  const url = new URL(window.location.href);
-  const parts = url.pathname.split("/").filter(Boolean);
+  if (langLink) {
+    const url = new URL(window.location.href);
+    const parts = url.pathname.split("/").filter(Boolean);
 
-  const currentLang = parts[0] === "en" ? "en" : "az";
-  langLink.textContent = currentLang === "en" ? "AZ" : "EN";
-  langLink.dataset.lang = currentLang === "en" ? "az" : "en";
+    const currentLang = parts[0] === "en" ? "en" : "az";
+    langLink.textContent = currentLang === "en" ? "AZ" : "EN";
+    langLink.dataset.lang = currentLang === "en" ? "az" : "en";
 
-  langLink.addEventListener("click", function (e) {
-    e.preventDefault();
-    const targetLang = this.dataset.lang;
+    langLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetLang = this.dataset.lang;
 
-    let pathParts = parts.slice();
-    if (["en", "az"].includes(pathParts[0])) pathParts.shift();
+      let pathParts = parts.slice();
+      if (["en", "az"].includes(pathParts[0])) pathParts.shift();
 
-    const newPath =
-      targetLang === "az"
-        ? "/" + pathParts.join("/")
-        : "/" + targetLang + "/" + pathParts.join("/");
-    url.pathname = newPath;
-    window.location.href = url.toString();
-  });
+      const newPath =
+        targetLang === "az"
+          ? "/" + pathParts.join("/")
+          : "/" + targetLang + "/" + pathParts.join("/");
+      url.pathname = newPath;
+      window.location.href = url.toString();
+    });
+  }
 
   if (menu_li.length) {
     menu_li.on("click", function () {
