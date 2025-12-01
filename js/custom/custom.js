@@ -3,6 +3,8 @@ $(document).on("ready", function () {
   var menu_li = $(".navbar-nav li a");
   var collapse = $(".navbar-collapse");
 
+  // Language switch link is optional on some pages; guard before touching it.
+  // If you ever add multiple switches you'll need to update this logic to loop.
   const langLink = document.querySelector(".language-switch");
   if (langLink) {
     const url = new URL(window.location.href);
@@ -28,6 +30,7 @@ $(document).on("ready", function () {
     });
   }
 
+  // Let Bootstrap own the open/close animation; we just auto-hide after a tap.
   if (menu_li.length) {
     menu_li.on("click", function () {
       if (collapse.hasClass("in")) {
@@ -36,6 +39,8 @@ $(document).on("ready", function () {
     });
   }
 
+  // Smooth-scroll in-page anchors. NOTE: hash targets must exist, otherwise
+  // nothing happens; adjust the offset (currently 50px) if header height changes.
   var menu_list = $(".navbar-nav");
   if (menu_list.length) {
     menu_list.on("click", ".pagescroll", function (event) {
@@ -53,6 +58,8 @@ $(document).on("ready", function () {
     });
   }
 
+  // Any .btn with an in-page href (#section) also scrolls smoothly.
+  // Restrict this selector if you later add external .btn links.
   $(".btn").on("click", function (event) {
     var hash_tag = $(this).attr("href");
     if (hash_tag && hash_tag.startsWith("#") && $(hash_tag).length) {
@@ -66,16 +73,20 @@ $(document).on("ready", function () {
     }
   });
 
+  // Counter animation requires the counterUp plugin (currently not loaded
+  // anywhere). Either include the script before this file or remove this block.
   var counter = $(".count");
-  if (counter.length) {
+  if (counter.length && $.fn.counterUp) {
     counter.counterUp({
       delay: 10,
       time: 1000,
     });
   }
 
+  // Popup gallery uses Magnific Popup; make sure its JS/CSS are loaded on
+  // pages that include .popup-gallery or this will throw.
   var gallery = $(".popup-gallery");
-  if (gallery.length) {
+  if (gallery.length && $.fn.magnificPopup) {
     $(".popup-gallery").magnificPopup({
       delegate: "a",
       type: "image",
@@ -95,8 +106,11 @@ $(document).on("ready", function () {
     });
   }
 
-  if ($(".contact-form-1").length) {
-    $(".contact-form-1").each(function () {
+  // Contact form relies on jQuery Validate + EmailJS.
+  // Validate is not bundled anywhere right now, so include it or expect errors.
+  var contactForms = $(".contact-form-1");
+  if (contactForms.length && $.fn.validate) {
+    contactForms.each(function () {
       $(this).validate({
         errorClass: "error",
         submitHandler: function (form) {
