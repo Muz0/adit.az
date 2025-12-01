@@ -27,11 +27,10 @@ $(document).on("ready", function () {
   });
 
   if (menu_li.length) {
-    menu_li.on("click", function (event) {
-      collapse.slideToggle();
-    });
-    $(".navbar-default .navbar-toggle").on("click", function (e) {
-      collapse.slideToggle();
+    menu_li.on("click", function () {
+      if (collapse.hasClass("in")) {
+        collapse.collapse("hide");
+      }
     });
   }
 
